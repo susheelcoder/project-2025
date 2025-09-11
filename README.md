@@ -1,5 +1,5 @@
 
-<!-- <div  style="background-image: url('image.png'); background-size: cover; padding: 30px; border-radius: 15px;"> -->
+<div  style="background-image: url('image.png'); background-size: cover; padding: 30px; border-radius: 15px;">
 # Project-2025
 
 <!-- ![Project-2025](image.png) -->

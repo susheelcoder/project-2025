@@ -1,8 +1,8 @@
 
-<div  style="background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD…Wi2sVjpdtaW4xDDGEQegFapBgVKlbEYX2Y5eOlSpUoHH/2Q=='); background-size: cover; padding: 30px; border-radius: 15px;">
+<!-- <div  style="background-image: url('image.png'); background-size: cover; padding: 30px; border-radius: 15px;"> -->
 # Project-2025
 
-![Project-2025](https://img.shields.io/badge/Project-2025-blue.svg)
+<!-- ![Project-2025](image.png) -->
 
 ## 🔥 Overview
 **Project-2025** is a collaborative, modular, and scalable initiative where Susheel (Project Lead), Shivam, and Himansu will build a series of **full-stack (frontend + backend)** projects — from small prototypes to large-scale applications.
@@ -40,7 +40,7 @@ This repository promotes teamwork, clean coding practices, and an easy contribut
 ## 📁 Repository Structure (suggested)
 
 
-</div>
+
 
 
 

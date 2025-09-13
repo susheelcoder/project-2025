@@ -80,7 +80,138 @@
   }
 }
 
+/* ===  men  ===*/
+/* === Hero Section (men) === */
+.men {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 40px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
 
+/* Left side */
+.men-left {
+  flex: 1;
+  max-width: 550px;
+}
 
+.men-left p:first-child {
+  color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
 
+.men-left h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.men-left p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Button & rating box */
+.men-left .b {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.men-left .b button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.men-left .b button:hover {
+  background-color: #0056b3;
+}
+
+.men-left .b p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Phone link */
+.men-left a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.men-left a:hover {
+  text-decoration: underline;
+}
+
+/* Right side images */
+.men-right {
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.men-img1 {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  /* object-fit: cover; */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.men-img2 {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  /* object-fit: cover; */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.men-right img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .men {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .men-left {
+    max-width: 100%;
+  }
+
+  .men-right {
+    gap: 15px;
+  }
+
+  .men-left .b {
+    justify-content: center;
+  }
+}
 

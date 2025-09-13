@@ -8,6 +8,89 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-1.css">
 </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+   .section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;               
+  padding: 60px 0%;
+  background: #f9f9f9;
+  flex-wrap: wrap;       
+}
+
+
+.section-1-left {
+  flex: 1;                
+  min-width: 400px;     
+}
+
+.section-1-left img {
+  width: 100%; 
+  height: 400%;           
+  border-radius: 10px;
+  display: block;
+}
+
+.section-1-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.section-1-right b {
+  color: #ff6b6b;           
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.section-1-right h2 {
+  font-size: 2rem;
+  margin: 15px 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+.section-1-right p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.section-1-right button {
+  background: #ff6b6b;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.section-1-right button:hover {
+  background: #e35656;
+}
+
+@media (max-width: 768px) {
+  .section-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-1-left,
+  .section-1-right {
+    min-width: 100%;      
+  }
+
+  .section-1-right {
+    margin-top: 20px;
+  }
+}
+
+</style>
 
 <body>
     <header class="header">
@@ -37,33 +120,41 @@
             <p>Donec scelerisque neque integer nulla habitant nec sem nam bibendum arcu rhoncus in consequat.</p>
             <div class="b">
                 <button>Enroll your kid</button>
-                ***** 4.8/5
-                <p> 4.8 rating on Google</p>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <p class="source">4.8 rating on Google</p>
+                </div>
             </div>
-            <a href="">(123) 456-7890</a>
+            <hr class="men-hr">
+            <a href="tel:1234567890" class="call-link">
+                <i class="fa-solid fa-phone"></i>
+                (123) 456-7890
+            </a>
         </div>
         <div class="men-right">
             <img class="men-img1" src="img/1.png" alt="">
             <img class="men-img2" src="img/1.png" alt="">
-
         </div>
     </men>
 
     <!-- section-1 - About-->
     <section class="section-1">
-        <div class="section-1-right">
-            <h6>About our</h6>
-            <h2>We are here to help parents raise happy and healthy children</h2>
-            <p>Aliquam rhoncus mauris, convallis volutpat velit bibendum dui duis ut vulputate amet, ac ipsum nisl convallis ut.</p>
-            <p>Pulvinar ultrices porta mattis quis lobortis est facilisis purus nunc, sed semper enim dictum sed donec condimentum sodales sed non vel malesuada morbi arcu justo, pretium sagittis hac nisi amet, fermentum nunc.</p>
-            <button>known more about us</button>
-        </div>
         <div class="section-1-left">
             <img src="img/1.png" alt="">
         </div>
-
-
+        <div class="section-1-right">
+            <b>About us</b>
+            <h2>We are here to help parents raise happy and healthy children</h2>
+            <p>
+                Aliquam rhoncus mauris, convallis volutpat velit bibendum dui duis ut vulputate amet,
+                ac ipsum nisl convallis ut. Pulvinar ultrices porta mattis quis lobortis est facilisis
+                purus nunc, sed semper enim dictum sed donec condimentum sodales sed non vel malesuada
+                morbi arcu justo, pretium sagittis hac nisi amet, fermentum nunc.
+            </p>
+            <button>Know more about us</button>
+        </div>
     </section>
+
 
 </body>
 

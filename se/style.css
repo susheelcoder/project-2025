@@ -1,0 +1,302 @@
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   /* margin: 10px; */
+   margin: 0 15%;
+   padding: 10px;
+ }
+
+ /* ==== header ==== */
+
+ header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 40px;
+   /* background: #f8f9fa;  */
+   /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */
+   font-family: Arial, sans-serif;
+ }
+
+ .header_left h2 {
+   margin: 0;
+   font-size: 1.5rem;
+   color: #333;
+ }
+
+ .header_senter .ul {
+   list-style: none;
+   display: flex;
+   gap: 30px;
+   margin: 0;
+   padding: 0;
+ }
+
+ .header_senter .li {
+   cursor: pointer;
+   font-size: 1rem;
+   color: #555;
+   text-transform: capitalize;
+   position: relative;
+   transition: color 0.3s ease;
+ }
+
+ .header_senter .li:hover {
+   color: #007bff;
+ }
+
+ /* Right buttons */
+ .header_right button {
+   padding: 8px 16px;
+   margin-left: 10px;
+   border: none;
+   background: #007bff;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 0.9rem;
+   transition: background 0.3s ease;
+ }
+
+ .header_right button:nth-child(2) {
+   background: #28a745;
+ }
+
+ .header_right button:hover {
+   opacity: 0.85;
+ }
+
+ @media (max-width: 768px) {
+   header {
+     flex-direction: column;
+     text-align: center;
+   }
+
+   .header_senter .ul {
+     flex-direction: column;
+     gap: 15px;
+     margin-top: 10px;
+   }
+
+   .header_right {
+     margin-top: 10px;
+   }
+ }
+
+ /* === section-1 === */
+ .section_1 {
+   padding: 100px 0 0;
+   margin: auto;
+   display: flex;
+ }
+
+ .section_div {
+   margin: 60px 0;
+   padding: 20px;
+ }
+
+ .section_div-2 {
+   padding: 0 30vh;
+ }
+
+ .se-1-b {
+   font-size: 30px;
+ }
+
+ .se-1-h2 {
+   font-size: 80px;
+ }
+
+ .se-1-p {
+   font-size: 40px;
+ }
+
+ .se-2-button {
+   padding: 20px 40px;
+   border-radius: 5px;
+   margin: 0 10px;
+ }
+
+
+ /* === section-2 ===*/
+ .section-2 {
+   padding: 12% 0 12%;
+   display: flex;
+   margin: auto;
+ }
+
+ .se-2-left {
+   margin: 50px 0;
+   padding: 20px;
+ }
+
+ .se-2-hr {
+   width: 100px;
+   height: 5px;
+   background-color: #000;
+   border: none;
+   border-radius: 3px;
+ }
+
+ .se-2-h2 {
+   font-size: 50px;
+ }
+
+ .se-2-p {
+   font-size: 20px;
+ }
+
+ .se-2-right {
+   margin: auto;
+ }
+
+ .sec-2-video {
+   border-radius: 30px;
+ }
+
+ /* ===  section-3  === */
+ .section-3 {
+   margin: 80px 0;
+ }
+
+ .se-3-b {
+   font-size: 20px;
+ }
+
+ .se-3-h2 {
+   font-size: 45px;
+ }
+
+ .se-3-p {
+   margin-bottom: 50px;
+ }
+
+ .se-3-buttom {
+   display: flex;
+ }
+
+ .a2,
+ .a4 {
+   padding: 10px;
+   margin: 70px 30px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .b1,
+ .b3 {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   padding: 10px;
+ }
+
+.a2:hover,
+.a4:hover,
+.b1:hover,
+.b3:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+ .se-3-img {
+   width: 280px;
+   height: 255px;
+   border-radius: 5%;
+ }
+
+ .se-3-hr {
+   width: 50px;
+   background-color: rgb(0, 0, 0);
+ }
+
+
+ /* ===  section-4  === */
+
+
+
+ /* === section-5 === */
+ .section-5 {
+   padding: 60px 40px;
+   font-family: Arial, sans-serif;
+ }
+
+ .se-5-up {
+   margin: 0 auto 40px;
+ }
+
+ .se-5-up b {
+   color: #007bff;
+   font-size: 1rem;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+ }
+
+ .se-5-up h2 {
+   margin: 10px 0;
+   font-size: 2rem;
+   color: #333;
+ }
+
+ .se-5-up p {
+   font-size: 1rem;
+   color: #555;
+   line-height: 1.6;
+ }
+
+ .se-5-down {
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ .se-5-down .do-1,
+ .se-5-down .do-2 {
+   flex: 1 1 300px;
+   background: #fff;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .se-5-down .do-1:hover,
+ .se-5-down .do-2:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .se-5-down h3 {
+   margin-bottom: 15px;
+   font-size: 1.3rem;
+   color: #333;
+ }
+
+ .se-5-down p {
+   font-size: 1rem;
+   color: #666;
+   line-height: 1.6;
+   margin-bottom: 15px;
+ }
+
+ .se-5-down b {
+   color: #007bff;
+   font-size: 0.95rem;
+ }
+
+ @media (max-width: 768px) {
+   .section-5 {
+     padding: 40px 20px;
+   }
+
+   .se-5-up h2 {
+     font-size: 1.6rem;
+   }
+ }
+
+
+ /*====  section-6  ====*/

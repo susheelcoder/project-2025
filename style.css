@@ -203,3 +203,87 @@ header {
 
 
   /* ===  section-4  === */
+
+  /* === section-5 === */
+  /* === Section 5 (Testimonials) === */
+.section-5 {
+  padding: 60px 40px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.se-5-up {
+  /* text-align: center;
+  max-width: 700px; */
+  margin: 0 auto 40px;
+}
+
+.se-5-up b {
+  color: #007bff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.se-5-up h2 {
+  margin: 10px 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.se-5-up p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.se-5-down {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; 
+}
+
+.se-5-down .do-1,
+.se-5-down .do-2 {
+  flex: 1 1 300px; 
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.se-5-down .do-1:hover,
+.se-5-down .do-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.se-5-down h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.se-5-down p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.se-5-down b {
+  color: #007bff;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .section-5 {
+    padding: 40px 20px;
+  }
+  .se-5-up h2 {
+    font-size: 1.6rem;
+  }
+}

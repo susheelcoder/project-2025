@@ -838,4 +838,39 @@ p, b, li, a, button {
 
 
   /* ===  section-6  === */
+   .section-6 {
+    margin: 50px 0;
+  }
+
+  .section-6-up img,
+  .section-6-down img {
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .section-6-down {
+    margin-top: 30px;
+  }
+
+  .img-up-1,
+  .img-down-1 {
+    width: 600px;
+    height: 400px;
+  }
+
+  .img-up-2,
+  .img-down-2 {
+    width: 300px;
+    height: 400px;
+  }
+
+  .section-6-up,
+  .section-6-down {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ===  section-7  === */
   

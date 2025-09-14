@@ -111,12 +111,12 @@
  }
 
  /* ===  men  ===*/
- .men {
+ .main {
    margin: 0 15%;
    padding: 10px;
  }
 
- .men {
+ .main {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -125,12 +125,12 @@
    font-family: Arial, sans-serif;
  }
 
- .men-left {
+ .main-left {
    flex: 1;
    max-width: 550px;
  }
 
- .men-left p:first-child {
+ .main-left p:first-child {
    color: hsl(240, 7%, 3%);
    font-weight: bold;
    text-transform: uppercase;
@@ -138,7 +138,7 @@
    margin-bottom: 15px;
  }
 
- .men-left h1 {
+ .main-left h1 {
    font-weight: 600;
    font-size: 4rem;
    color: #333;
@@ -146,14 +146,14 @@
    line-height: 1.3;
  }
 
- .men-left p {
+ .main-left p {
    font-size: 0.95rem;
    color: #797878c9;
    line-height: 1.6;
    margin-bottom: 20px;
  }
 
- .men-left .b {
+ .main-left .b {
    display: flex;
    align-items: center;
    flex-wrap: wrap;
@@ -161,7 +161,7 @@
    margin-top: 35px;
  }
 
- .men-left .b button {
+ .main-left .b button {
    background-color: #000000a9;
    color: white;
    border: none;
@@ -172,11 +172,11 @@
    transition: background-color 0.3s ease;
  }
 
- .men-left .b button:hover {
+ .main-left .b button:hover {
    background-color: #0056b3;
  }
 
- .men-left a {
+ .main-left a {
    display: inline-block;
    margin-top: 20px;
    font-size: 1.3rem;
@@ -185,11 +185,11 @@
    font-weight: bold;
  }
 
- .men-left a:hover {
+ .main-left a:hover {
    text-decoration: underline;
  }
 
- .men-right {
+ .main-right {
    flex: 1;
    display: flex;
    gap: 20px;
@@ -197,19 +197,18 @@
    flex-wrap: wrap;
  }
 
- .men-right {
-   /* background-color: #0056b3; */
+ .main-right {
    position: relative;
    width: 300px;
    height: 350px;
  }
 
- .men-right img:hover {
+ .main-right img:hover {
    transform: scale(1.03);
    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
  }
 
- .men-img1 {
+ .main-img1 {
    position: absolute;
    top: -150px;
    left: 20px;
@@ -219,7 +218,7 @@
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
  }
 
- .men-img2 {
+ .main-img2 {
    position: absolute;
    top: 50px;
    left: 300px;
@@ -229,7 +228,7 @@
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
  }
 
- .men-hr {
+ .main-hr {
    background-color: rgba(39, 39, 38, 0.123);
    margin-top: 35px;
    height: 0.05vh;
@@ -279,15 +278,15 @@
      text-align: center;
    }
 
-   .men-left {
+   .main-left {
      max-width: 100%;
    }
 
-   .men-right {
+   .main-right {
      gap: 15px;
    }
 
-   .men-left .b {
+   .main-left .b {
      justify-content: center;
    }
  }

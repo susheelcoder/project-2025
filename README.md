@@ -21,7 +21,7 @@ This repository promotes teamwork, clean coding practices, and an easy contribut
   GitHub: [https://github.com/Shivam-pal-88102](https://github.com/Shivam-pal-88102)
 
 - **Himansu** — Developer  
-  GitHub: [https://github.com/rajputhimanshusingh01](https://github.com/rajputhimanshusingh01)
+  GitHub: [https://github.com/rajputhimanshusingh01](https://github.com/Himanshu-012)
 
 ---
 ## 🧭 Project Goals

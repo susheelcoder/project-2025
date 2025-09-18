@@ -1,17 +1,4 @@
 
-@@ -1,34 +0,0 @@
-
-
-# Project-2025
-
-## 🔥 Overview
-**Project-2025** is a collaborative, modular, and scalable initiative where Susheel (Project Lead), Shivam, and Himansu will build a series of **full-stack (frontend + backend)** projects — from small prototypes to large-scale applications.
-
-Each project will live inside its own sub-folder within this repository.  
-Once a project is completed, it will be archived or moved to a separate repository, and a new project will be started in this folder following the same structure.
-
-This repository promotes teamwork, clean coding practices, and an easy contributing workflow.
-
 ---
 ## 👥 Team
 - **Susheel** — Project Lead / Maintainer  

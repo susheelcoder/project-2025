@@ -7,10 +7,19 @@
 - **Shivam** — Developer  
   GitHub: [https://github.com/Shivam-pal-88102](https://github.com/Shivam-pal-88102)
 
-- **Himansu** — Developer  
-  GitHub: [https://github.com/Himanshu-012](https://github.com/Himanshu-012)
+- **vijay dhanik** — HTML and CSS  
+  GitHub: [https://github.com/vijaydhanik](https://github.com/vijaydhanik)
 
----
+
+
+- **Karan Bisht** — Frontend +backend  
+  GitHub: [https://github.com/Karanbisht40](https://github.com/Karanbisht40)
+
+- **Kartik Singh** — HTML5, CSS  
+  GitHub: [https://github.com/kartiksingh3129-bit](https://github.com/kartiksingh3129-bit)
+
+
+
 ## 🧭 Project Goals
 1. Clean, maintainable codebase with modular architecture.  
 2. Easy onboarding for new contributors.  

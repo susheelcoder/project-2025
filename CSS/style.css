@@ -31,12 +31,13 @@
    font-weight: 400;
  }
 
- .section-men {
+ .section-main {
    background-image: url('img/main.svg');
+   background-image: url('https://websitedemos.net/daycare-02/wp-content/uploads/sites/1041/2022/03/day-care-page-header-blobs.svg');
    background-repeat: no-repeat;
    background-size: 50% 150%;
    background-position: right;
-   background-color: #f9f9f9;
+   background-color: #f6fdfe;
 
  }
 
@@ -110,7 +111,7 @@
    }
  }
 
- /* ===  men  ===*/
+ /* ===  main  ===*/
  .main {
    margin: 0 15%;
    padding: 10px;
@@ -1149,7 +1150,7 @@
 
  /* ===  section-11  === */
  .section-foot {
-  background-image: url(img/1.png);
+  background-image: url('/img/1.png');
   padding: 110px 20px;
   text-align: center;
   font-family: 'Outfit', sans-serif;

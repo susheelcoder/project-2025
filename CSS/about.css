@@ -1046,9 +1046,316 @@ body {
                 transform: translateY(0);
             }
         }
-  
 
+        
+        /* parent say Section Styles */
+        .testimonial-section {
+            background-color: #f8fafb;
+            padding: 80px 0;
+            position: relative;
+        }
 
+        .testimonial-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .testimonial-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonial-tag {
+            font-size: 16px;
+            color: #6c757d;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .testimonial-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 50px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+        }
+
+        .testimonial-image {
+            position: relative;
+        }
+
+        .testimonial-photo {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-text-area {
+            padding-left: 30px;
+        }
+
+        .testimonial-quote-mark {
+            font-size: 3.5rem;
+            color: #fd7e14;
+            font-family: Georgia, serif;
+            font-style: italic;
+            line-height: 1;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            color: #495057;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 18px;
+            color: #2c3e50;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* CTA Section Styles */
+        .cta-section {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 120px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .cta-description {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #fd7e14, #e85d04);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(253, 126, 20, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(253, 126, 20, 0.4);
+            background: linear-gradient(135deg, #e85d04, #fd7e14);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .testimonial-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+                padding: 40px;
+            }
+
+            .testimonial-text-area {
+                padding-left: 0;
+            }
+
+            .testimonial-photo {
+                height: 280px;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .cta-title {
+                font-size: 3.2rem;
+            }
+
+            .cta-section {
+                background-attachment: scroll;
+                padding: 100px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-section {
+                padding: 60px 0;
+            }
+
+            .testimonial-wrapper {
+                padding: 0 20px;
+            }
+
+            .testimonial-content {
+                padding: 35px 25px;
+                border-radius: 20px;
+            }
+
+            .testimonial-header {
+                margin-bottom: 40px;
+            }
+
+            .testimonial-quote {
+                font-size: 16px;
+            }
+
+            .testimonial-quote-mark {
+                font-size: 3rem;
+                margin-bottom: 20px;
+            }
+
+            .cta-title {
+                font-size: 2.8rem;
+            }
+
+            .cta-description {
+                font-size: 18px;
+            }
+
+            .cta-section {
+                padding: 80px 0;
+            }
+
+            .cta-button {
+                padding: 16px 35px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-section {
+                padding: 50px 0;
+            }
+
+            .testimonial-wrapper {
+                padding: 0 15px;
+            }
+
+            .testimonial-content {
+                padding: 30px 20px;
+                gap: 30px;
+            }
+
+            .testimonial-photo {
+                height: 250px;
+                max-width: 250px;
+            }
+
+            .testimonial-quote {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            .testimonial-author {
+                font-size: 16px;
+            }
+
+            .cta-title {
+                font-size: 2.2rem;
+                line-height: 1.3;
+            }
+
+            .cta-description {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+
+            .cta-container {
+                padding: 0 15px;
+            }
+
+            .cta-section {
+                padding: 60px 0;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 15px;
+                border-radius: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-content {
+                border-radius: 15px;
+                padding: 25px 15px;
+            }
+
+            .testimonial-tag {
+                font-size: 14px;
+            }
+
+            .cta-title {
+                font-size: 1.9rem;
+            }
+
+            .testimonial-quote-mark {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Animation for testimonial content */
+        .testimonial-content {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
 /* ===  footer  ==== */
 
 .footer {

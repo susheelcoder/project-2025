@@ -11,9 +11,8 @@
   GitHub: [https://github.com/vijaydhanik](https://github.com/vijaydhanik)
 
 - **Karan Bisht** — Full-Stack developer
-- 
-    GitHub: [https://github.com/Karanbisht40](https://github.com/Karanbisht40)
-
+  GitHub: [https://github.com/Karanbisht40](https://github.com/Karanbisht40)
+  
 - **Kartik Singh** — HTML5, CSS  
   GitHub: [https://github.com/kartiksingh3129-bit](https://github.com/kartiksingh3129-bit)
 

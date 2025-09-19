@@ -4,6 +4,14 @@
  }
 
  body {
-     margin: 0 15%;
-     padding: 10px;
+     margin: 0 ;
+     /* padding: 10px; */
+     width: 100%;
  }
+
+ 
+    /* About Section */
+.about-text {
+    font-size: 3rem;
+    margin-left: 2rem;
+}

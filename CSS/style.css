@@ -492,8 +492,8 @@
  }
 
  .section-2-img {
-   width: 330px;
-   height: 440px;
+   width: 430px;
+   height: 540px;
    border-radius: 30px;
    display: block;
    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -508,13 +508,13 @@
  .section-2-right {
    flex: 1;
    margin-left: 70px;
-   margin-right: 300px;
+   margin-right: 200px;
  }
 
  .section-2-right i {
-   margin-top: 29px;
+   margin-top: 69px;
    display: inline-block;
-   font-size: 40px;
+   font-size: 50px;
    color: #ff6b6b;
    line-height: 1;
  }
@@ -663,6 +663,8 @@
    line-height: 1.3;
  }
 
+
+
  .section-3-down {
    display: flex;
    justify-content: center;
@@ -671,15 +673,16 @@
  }
 
  .section-3-down>div {
+  justify-content: center;
    border: 2.8px solid #b2f4ec;
    margin-left: 0;
+   margin-top: -10px;
    margin-right: 0;
-   margin: 25px;
+   margin: 5px;
    border-radius: 30px;
    padding: 10px;
-   width: 300px;
+   width: 400px;
    transition: transform 0.3s, box-shadow 0.3s;
-   text-align: left;
  }
 
  .section-3-down>div:hover {
@@ -689,7 +692,7 @@
 
  .section-3-down img {
    width: 100%;
-   height: 220px;
+   height: 380px;
    border-radius: 30px;
    display: block;
    margin-bottom: 15px;
@@ -1413,12 +1416,12 @@
   }
 
   .section-7-up h2 {
-    padding: 0 100px; /* reduce big side padding */
+    padding: 0 100px; 
     font-size: 2.8rem;
   }
 
   .section-7-down iframe {
-    min-width: unset; /* allow iframe to shrink */
+    min-width: unset; 
     width: 90%;
     max-width: 700px;
   }
@@ -1431,19 +1434,19 @@
   }
 
   .section-7-up h2 {
-    padding: 0;          /* remove side padding */
-    font-size: 2rem;     /* smaller text */
+    padding: 0;          
+    font-size: 2rem;    
   }
 
   .section-7-down {
-    flex-direction: column; /* stack if needed */
+    flex-direction: column; 
   }
 
   .section-7-down iframe {
     width: 100%;
     max-width: 100%;
     min-width: unset;
-    aspect-ratio: 16/9;  /* keep ratio */
+    aspect-ratio: 16/9;  
   }
 }
 
@@ -1493,14 +1496,14 @@
 /* ✅ Tablet view (≤1024px) */
 @media (max-width: 1024px) {
   .section-8 {
-    gap: 20px;                /* less gap between columns */
-    padding: 20px;            /* increase padding a bit */
+    gap: 20px;              
+    padding: 20px;           
   }
 
   .section-8-left,
   .section-8-right {
-    margin: 20px;             /* less margin */
-    padding: 0 20px;          /* less horizontal padding */
+    margin: 20px;            
+    padding: 0 20px;        
   }
 
   .section-8-left h3,
@@ -1517,7 +1520,7 @@
 /* ✅ Mobile view (≤768px) */
 @media (max-width: 768px) {
   .section-8 {
-    flex-direction: column;  /* stack the two columns */
+    flex-direction: column;  
     gap: 30px;
     padding: 15px;
   }
@@ -1530,17 +1533,17 @@
 
   .section-8-left h3,
   .section-8-right h3 {
-    font-size: 1.3rem;        /* smaller headings */
+    font-size: 1.3rem;     
   }
 
   .section-8-left p,
   .section-8-right p {
-    font-size: 0.9rem;        /* smaller text */
+    font-size: 0.9rem;       
   }
 
   .section-8-left hr,
   .section-8-right hr {
-    margin: 20px 0;           /* tighter hr spacing */
+    margin: 20px 0;         
   }
 }
 
@@ -1577,7 +1580,7 @@
  .section-9-down {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-   gap: 30px;
+   gap: 10px;
  }
 
  .se-9-down-box {
@@ -1592,8 +1595,8 @@
 
  .se-9-down-box img {
    text-align: center;
-   width: 280px;
-   height: 420px;
+   width: 400px;
+   height: 470px;
    border-radius: 10px;
    margin-bottom: 15px;
  }
@@ -1692,7 +1695,7 @@
 
  .se-10-down-box1 img {
    margin-left: 50px;
-   width: 380px;
+   width: 400px;
    height: 490px;
    object-fit: cover;
    border-radius: 16px;

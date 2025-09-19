@@ -1,114 +1,178 @@
- * {
-     margin: 0;
-     padding: 0;
- }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
 
 }
-
-
-
-/*=== header ===*/
-.header {
-    /* margin: 0 15%; */
-    /* padding: 10px; */
-    display: flex;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 15px 30px; */
-    position: relative;
-    z-index: 1000;
+ */
+/* === main == */
+.main {
+    margin-top: 40px;
+    margin: 0 15%;
+    padding: 40px;
 }
 
-.header-left .header-h2 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-}
-
-.header-senter .header-ul {
+.main {
     display: flex;
-    gap: 25px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 80px 20px;
+    font-family: Arial, sans-serif;
 }
 
-.header-senter .header-ul li a {
-    text-decoration: none;
+.main-div {
+
+    /* margin: 0 20%; */
+    /* margin-top: 40px; */
+}
+
+.main-div b {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.main-div h1 {
+    font-size: 2.8rem;
+    line-height: 1.3;
     color: #333;
     font-weight: 500;
-    padding: 6px 10px;
-    border-radius: 4px;
-    transition: background 0.3s ease, color 0.3s ease;
+    margin: 0;
 }
 
-.header-senter .header-ul li a:hover {
-    background: #007BFF;
-    color: #fff;
+/* ---------- Responsive (Tablet) ---------- */
+@media (max-width: 992px) {
+    .main {
+        padding: 60px 15px;
+    }
+
+    .main-div h1 {
+        font-size: 2.2rem;
+    }
 }
 
-.right .header-button {
-    padding: 8px 16px;
-    background: #007BFF;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background 0.3s ease;
+/* ---------- Responsive (Mobile) ---------- */
+@media (max-width: 768px) {
+    .main {
+        padding: 40px 10px;
+    }
+
+    .main-div {
+        margin: 0 0%;
+        margin-top: 40px;
+    }
+
+    .main-div b {
+        font-size: 0.9rem;
+    }
+
+    .main-div h1 {
+        font-size: 2.8rem;
+    }
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    user-select: none;
+
+/* === section-1  === */
+.section-1 {
+    margin: 0 15%;
+    padding: 40px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.section-1 {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+
+}
+
+.section-1-left {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(12, 18, 30, 0.06);
+}
+
+.section-1-left .main-image {
+    display: block;
     width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: inherit;
+    transition: transform 300ms ease;
 }
 
-/* Header */
-.header {
-    background: linear-gradient(135deg, #e8f4f8 0%, #d1e9f2 100%);
-    padding: 60px 0;
-    position: relative;
-    overflow: hidden;
+.section-1-left .main-image:hover {
+    transform: scale(1.02);
 }
 
-.header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 60%;
-    height: 200%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
-    transform: rotate(15deg);
-    z-index: 1;
+.section-1-right {
+    color: #222222;
+    line-height: 1.6;
+    font-family: 'Outfit', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    padding: 6px 4px;
 }
 
-.header-content {
-    position: relative;
-    z-index: 2;
+.section-1-right h2 {
+    margin: 0 0 12px 0;
+    font-size: clamp(1.25rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #0f1722;
 }
+
+.section-1-right p {
+    margin: 0 0 10px 0;
+    color: #6b6b6b;
+    font-size: clamp(.95rem, 1.4vw, 1rem);
+}
+
+.section-1-right p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 840px) {
+    .section-1 {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 16px;
+        margin: 28px 16px;
+    }
+
+    .section-1-left .main-image {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 420px) {
+    .section-1 {
+        padding: 12px;
+        margin: 18px 12px;
+        gap: 12px;
+    }
+
+    .section-1-right h2 {
+        font-size: 1.15rem;
+    }
+
+    .section-1-right p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* =================== */
 
 .about-tag {
     font-size: 19px;
@@ -813,554 +877,556 @@ body {
     }
 }
 
-        /* Teachers Section Styles */
-        .teachers-section {
-            background-color: #ffffff;
-            padding: 100px 0;
-        }
-
-        .teachers-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .teachers-header {
-            margin-bottom: 60px;
-        }
-
-        .teachers-subtitle {
-            font-size: 16px;
-            color: #6c757d;
-            font-weight: 500;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .teachers-main-title {
-            font-size: 3.2rem;
-            font-weight: 700;
-            color: #2c3e50;
-            line-height: 1.3;
-            max-width: 1000px;
-            margin: 0 auto;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .teachers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 60px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .teacher-card {
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #f1f3f4;
-            
-        }
-
-        .teacher-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .teacher-photo {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .teacher-card:hover .teacher-photo {
-            transform: scale(1.05);
-        }
-
-        .teacher-info {
-            padding: 25px 20px 30px 20px;
-            text-align: center;
-        }
-
-        .teacher-name {
-            font-size: 22px;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 8px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .teacher-role {
-            font-size: 15px;
-            color: #6c757d;
-            font-weight: 500;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* Individual teacher card variations */
-        .teacher-card:nth-child(1) {
-            background: linear-gradient(135deg, #fff 0%, #fdf8ff 100%);
-        }
-
-        .teacher-card:nth-child(2) {
-            background: linear-gradient(135deg, #fff 0%, #f8fdff 100%);
-        }
-
-        .teacher-card:nth-child(3) {
-            background: linear-gradient(135deg, #fff 0%, #fffdf8 100%);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .teachers-section {
-                padding: 80px 0;
-            }
-
-            .teachers-main-title {
-                font-size: 2.8rem;
-            }
-
-            .teachers-grid {
-                gap: 35px;
-            }
-
-            .teacher-photo {
-                height: 280px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .teachers-section {
-                padding: 60px 0;
-            }
-
-            .teachers-container {
-                padding: 0 20px;
-            }
-
-            .teachers-main-title {
-                font-size: 2.4rem;
-            }
-
-            .teachers-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-                max-width: 600px;
-            }
-
-            .teacher-photo {
-                height: 250px;
-            }
-
-            .teachers-header {
-                margin-bottom: 50px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .teachers-section {
-                padding: 50px 0;
-            }
-
-            .teachers-container {
-                padding: 0 15px;
-            }
-
-            .teachers-main-title {
-                font-size: 2rem;
-                line-height: 1.4;
-            }
-
-            .teachers-grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-                max-width: 350px;
-            }
-
-            .teacher-photo {
-                height: 280px;
-            }
-
-            .teacher-info {
-                padding: 20px 15px 25px 15px;
-            }
-
-            .teacher-name {
-                font-size: 20px;
-            }
-
-            .teacher-role {
-                font-size: 14px;
-            }
-
-            .teachers-subtitle {
-                font-size: 14px;
-            }
-
-            .teachers-header {
-                margin-bottom: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .teachers-main-title {
-                font-size: 1.8rem;
-            }
-
-            .teacher-card {
-                border-radius: 15px;
-            }
-
-            .teacher-photo {
-                height: 250px;
-            }
-        }
-
-        /* Animation for loading */
-        .teacher-card {
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .teacher-card:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        .teacher-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        .teacher-card:nth-child(3) {
-            animation-delay: 0.3s;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        
-        /* parent say Section Styles */
-        .testimonial-section {
-            background-color: #f8fafb;
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .testimonial-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .testimonial-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .testimonial-tag {
-            font-size: 16px;
-            color: #6c757d;
-            font-weight: 500;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .testimonial-content {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 50px;
-            align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 25px;
-            padding: 50px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e9ecef;
-        }
-
-        .testimonial-image {
-            position: relative;
-        }
-
-        .testimonial-photo {
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .testimonial-text-area {
-            padding-left: 30px;
-        }
-
-        .testimonial-quote-mark {
-            font-size: 3.5rem;
-            color: #fd7e14;
-            font-family: Georgia, serif;
-            font-style: italic;
-            line-height: 1;
-            margin-bottom: 25px;
-            display: block;
-        }
-
-        .testimonial-quote {
-            font-size: 18px;
-            color: #495057;
-            line-height: 1.7;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-size: 18px;
-            color: #2c3e50;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* CTA Section Styles */
-        .cta-section {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
-                        url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 120px 0;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .cta-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .cta-title {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .cta-description {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            line-height: 1.6;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #fd7e14, #e85d04);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(253, 126, 20, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(253, 126, 20, 0.4);
-            background: linear-gradient(135deg, #e85d04, #fd7e14);
-        }
-
-        .cta-button:active {
-            transform: translateY(-1px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .testimonial-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-                padding: 40px;
-            }
-
-            .testimonial-text-area {
-                padding-left: 0;
-            }
-
-            .testimonial-photo {
-                height: 280px;
-                max-width: 280px;
-                margin: 0 auto;
-            }
-
-            .cta-title {
-                font-size: 3.2rem;
-            }
-
-            .cta-section {
-                background-attachment: scroll;
-                padding: 100px 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .testimonial-section {
-                padding: 60px 0;
-            }
-
-            .testimonial-wrapper {
-                padding: 0 20px;
-            }
-
-            .testimonial-content {
-                padding: 35px 25px;
-                border-radius: 20px;
-            }
-
-            .testimonial-header {
-                margin-bottom: 40px;
-            }
-
-            .testimonial-quote {
-                font-size: 16px;
-            }
-
-            .testimonial-quote-mark {
-                font-size: 3rem;
-                margin-bottom: 20px;
-            }
-
-            .cta-title {
-                font-size: 2.8rem;
-            }
-
-            .cta-description {
-                font-size: 18px;
-            }
-
-            .cta-section {
-                padding: 80px 0;
-            }
-
-            .cta-button {
-                padding: 16px 35px;
-                font-size: 16px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .testimonial-section {
-                padding: 50px 0;
-            }
-
-            .testimonial-wrapper {
-                padding: 0 15px;
-            }
-
-            .testimonial-content {
-                padding: 30px 20px;
-                gap: 30px;
-            }
-
-            .testimonial-photo {
-                height: 250px;
-                max-width: 250px;
-            }
-
-            .testimonial-quote {
-                font-size: 15px;
-                margin-bottom: 25px;
-            }
-
-            .testimonial-author {
-                font-size: 16px;
-            }
-
-            .cta-title {
-                font-size: 2.2rem;
-                line-height: 1.3;
-            }
-
-            .cta-description {
-                font-size: 16px;
-                margin-bottom: 35px;
-            }
-
-            .cta-container {
-                padding: 0 15px;
-            }
-
-            .cta-section {
-                padding: 60px 0;
-            }
-
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 15px;
-                border-radius: 40px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .testimonial-content {
-                border-radius: 15px;
-                padding: 25px 15px;
-            }
-
-            .testimonial-tag {
-                font-size: 14px;
-            }
-
-            .cta-title {
-                font-size: 1.9rem;
-            }
-
-            .testimonial-quote-mark {
-                font-size: 2.5rem;
-            }
-        }
-
-        /* Animation for testimonial content */
-        .testimonial-content {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.3s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    
+/* Teachers Section Styles */
+.teachers-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.teachers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.teachers-header {
+    margin-bottom: 60px;
+}
+
+.teachers-subtitle {
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.teachers-main-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1.3;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.teacher-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f3f4;
+
+}
+
+.teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.teacher-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.teacher-card:hover .teacher-photo {
+    transform: scale(1.05);
+}
+
+.teacher-info {
+    padding: 25px 20px 30px 20px;
+    text-align: center;
+}
+
+.teacher-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.teacher-role {
+    font-size: 15px;
+    color: #6c757d;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Individual teacher card variations */
+.teacher-card:nth-child(1) {
+    background: linear-gradient(135deg, #fff 0%, #fdf8ff 100%);
+}
+
+.teacher-card:nth-child(2) {
+    background: linear-gradient(135deg, #fff 0%, #f8fdff 100%);
+}
+
+.teacher-card:nth-child(3) {
+    background: linear-gradient(135deg, #fff 0%, #fffdf8 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .teachers-section {
+        padding: 80px 0;
+    }
+
+    .teachers-main-title {
+        font-size: 2.8rem;
+    }
+
+    .teachers-grid {
+        gap: 35px;
+    }
+
+    .teacher-photo {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .teachers-section {
+        padding: 60px 0;
+    }
+
+    .teachers-container {
+        padding: 0 20px;
+    }
+
+    .teachers-main-title {
+        font-size: 2.4rem;
+    }
+
+    .teachers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 600px;
+    }
+
+    .teacher-photo {
+        height: 250px;
+    }
+
+    .teachers-header {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .teachers-section {
+        padding: 50px 0;
+    }
+
+    .teachers-container {
+        padding: 0 15px;
+    }
+
+    .teachers-main-title {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+
+    .teachers-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 350px;
+    }
+
+    .teacher-photo {
+        height: 280px;
+    }
+
+    .teacher-info {
+        padding: 20px 15px 25px 15px;
+    }
+
+    .teacher-name {
+        font-size: 20px;
+    }
+
+    .teacher-role {
+        font-size: 14px;
+    }
+
+    .teachers-subtitle {
+        font-size: 14px;
+    }
+
+    .teachers-header {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teachers-main-title {
+        font-size: 1.8rem;
+    }
+
+    .teacher-card {
+        border-radius: 15px;
+    }
+
+    .teacher-photo {
+        height: 250px;
+    }
+}
+
+/* Animation for loading */
+.teacher-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.teacher-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.teacher-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.teacher-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* parent say Section Styles */
+.testimonial-section {
+    background-color: #f8fafb;
+    padding: 80px 0;
+    position: relative;
+}
+
+.testimonial-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.testimonial-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.testimonial-tag {
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonial-content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 50px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.testimonial-image {
+    position: relative;
+}
+
+.testimonial-photo {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-text-area {
+    padding-left: 30px;
+}
+
+.testimonial-quote-mark {
+    font-size: 3.5rem;
+    color: #fd7e14;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.testimonial-quote {
+    font-size: 18px;
+    color: #495057;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* CTA Section Styles */
+.cta-section {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+        url('/img/DMSRC Website/_MG_1259.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.cta-description {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #fd7e14, #e85d04);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(253, 126, 20, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(253, 126, 20, 0.4);
+    background: linear-gradient(135deg, #e85d04, #fd7e14);
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .testimonial-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .testimonial-text-area {
+        padding-left: 0;
+    }
+
+    .testimonial-photo {
+        height: 280px;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .cta-title {
+        font-size: 3.2rem;
+    }
+
+    .cta-section {
+        background-attachment: scroll;
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-section {
+        padding: 60px 0;
+    }
+
+    .testimonial-wrapper {
+        padding: 0 20px;
+    }
+
+    .testimonial-content {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+    .testimonial-header {
+        margin-bottom: 40px;
+    }
+
+    .testimonial-quote {
+        font-size: 16px;
+    }
+
+    .testimonial-quote-mark {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .cta-title {
+        font-size: 2.8rem;
+    }
+
+    .cta-description {
+        font-size: 18px;
+    }
+
+    .cta-section {
+        padding: 80px 0;
+    }
+
+    .cta-button {
+        padding: 16px 35px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-section {
+        padding: 50px 0;
+    }
+
+    .testimonial-wrapper {
+        padding: 0 15px;
+    }
+
+    .testimonial-content {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .testimonial-photo {
+        height: 250px;
+        max-width: 250px;
+    }
+
+    .testimonial-quote {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .testimonial-author {
+        font-size: 16px;
+    }
+
+    .cta-title {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    .cta-description {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+
+    .cta-container {
+        padding: 0 15px;
+    }
+
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-button {
+        padding: 15px 30px;
+        font-size: 15px;
+        border-radius: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-content {
+        border-radius: 15px;
+        padding: 25px 15px;
+    }
+
+    .testimonial-tag {
+        font-size: 14px;
+    }
+
+    .cta-title {
+        font-size: 1.9rem;
+    }
+
+    .testimonial-quote-mark {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for testimonial content */
+.testimonial-content {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ===  footer  ==== */
 
 .footer {

@@ -52,6 +52,25 @@ button {
   color: #333;
 }
 
+.header-left .header-h2 {
+  display: flex;              
+  align-items: center;        
+  gap: 8px;                  
+  margin: 0;
+  font-size: 1.5rem;         
+  font-weight: 600;
+  color: #222;               
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+/* Icon style */
+.header-left .header-h2 img {
+  width: 32px;    
+  height: 32px;   
+  object-fit: contain;
+  display: block; 
+}
+
 .header-senter .header-ul {
   display: flex;
   gap: 25px;
@@ -281,3 +300,40 @@ button {
       justify-content: center;
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+.download-btn {
+  display: inline-flex;          
+  align-items: center;
+  gap: 8px;                     
+  background-color: #838385b8;
+  color: #faf9f9;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;         
+  font-weight: 600;
+  font-size: 1rem;
+
+  border: 2px solid #000000;     
+}
+
+.download-btn:hover {
+  background-color: #74a2db;     
+  border-color: #e9e0e0; 
+  border: 2px solid #37d407;       
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

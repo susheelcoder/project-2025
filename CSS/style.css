@@ -1798,11 +1798,19 @@
 }
 
  /* ===  section-11  === */
+  
+
+
+ /*  */
  .section-foot {
-  background-image: url('/img/1.png');
-  padding: 110px 20px;
-  text-align: center;
-  font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('/img/DMSRC Website/_MG_1277.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+    position: relative;
 }
 
 .section-11 {

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="CSS/all-im.css">
-    <link rel="stylesheet" href="CSS/program.css">
+    <link rel="stylesheet" href="CSS/contact.css">
 </head>
 
 <body>
@@ -41,36 +42,95 @@
 
         <!--===  men  ===-->
         <main class="main">
+            <!-- Page Banner Section Start -->
+<div class="banner-section">
+  <div class="banner-content">
+    <div class="banner-label">Contact</div>
+    <h1>Have questions about<br> our programs?</h1>
+    <p>
+      Please contact us with any felis mauris quisque scelerisque, porta placerat pharetra, sodales vel vitae tincidunt mauris arcu placerat quis.
+    </p>
+  </div>
+  <div class="banner-bg"></div>
+</div>
+<!-- Page Banner Section End -->
+
 
         </main>
-    </section>
-    <!--======= page-section ===========   -->
-    <div class="page-section" id="about">
 
-        <!--=== section-1  ===-->
-        <section class="section-1">
+         <!-- Contact Form Section -->
+  <div class="container">
+    <div class="sidebar">
+      <section>
+        <h2>General</h2>
+        <p>Blandit auctor felis habitasse aliquet est:</p>
+        <span class="email">info@example.com</span>
+      </section>
+      <section>
+        <h2>Parents</h2>
+        <p>Have any ullamcorper enim morbi volutpat feugiat? Get in touch:</p>
+        <span class="email">enrollment@example.com</span>
+      </section>
+      <section>
+        <h2>Vendor</h2>
+        <p>Interested in pretium nisi, ullamcorper enim morbi volutpat? Drop us a line:</p>
+        <span class="email">collab@example.com</span>
+      </section>
+      <div class="social">
+        <p>Keep in touch</p>
+        <span><i class="fa-brands fa-facebook"></i></span>
+        <span><i class="fa-brands fa-twitter"></i></span>
+        <span><i class="fa-brands fa-youtube"></i></span>
+      </div>
+    </div>
+    <div class="form-area">
+      <form>
+        <label>Parent's Name <span class="star">*</span></label>
+        <input type="text" required />
+        <label>Email <span class="star">*</span></label>
+        <input type="email" required />
+        <p class="question">I have a question about:</p>
+        <label><input type="radio" name="child" /> Infant</label><br />
+        <label><input type="radio" name="child" /> Toddler</label><br />
+        <label><input type="radio" name="child" /> Preschool</label>
+        <label>Questions or message <span class="star">*</span></label>
+        <textarea rows="3" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
 
-        </section>
+  <!-- Address & Map Section -->
+  <div class="info-and-map">
+    <div class="info-row">
+      <div class="info-col">
+        <h3>Address</h3>
+        <p>Demo St, Brooklyn, NY 11223, United States</p>
+        <a class="directions" href="#" target="_blank">
+          <span style="font-size:1.5em; color:#ff9355;">&#x1F517;</span> Get directions
+        </a>
+      </div>
+      <div class="info-col">
+        <h3>Work hours</h3>
+        <p>Mon-Thu: 9:00-4:00<br>
+          Fri-Sat: 9:00-3:00<br>
+          Sun: Close
+        </p>
+      </div>
+      <div class="info-col">
+        <h3>Phone</h3>
+        <p>+1 123-456-7890<br>
+          +1 123-456-7891</p>
+      </div>
+    </div>
+    <div class="map-area">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9579548596294!2d-73.96258268459355!3d40.67817807933756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ba3225adfe1%3A0x7cef1b5bf2e4b4ea!2sBrooklyn%2C%20NY!5e0!3m2!1sen!2sus!4v1631881234567!5m2!1sen!2sus"
+        width="100%" height="350" allowfullscreen="" loading="lazy" style="border:0;">
+      </iframe>
+    </div>
+  </div>
 
-        <!--=== section-2  ===-->
-        <section class="section-2">
-
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div><!--\\\\\\ page-section ////-->
     <!-- === footer  === -->
     <footer>
         <section class="footer">

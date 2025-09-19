@@ -31,86 +31,20 @@
    font-weight: 400;
  }
 
- .section-men {
-   background-image: url('https://websitedemos.net/daycare-02/wp-content/uploads/sites/1041/2022/03/day-care-hero-blobs-background.svg');
+ /* .section-main {
+   background-image: url('img/main.svg');
+   background-image: url('https://websitedemos.net/daycare-02/wp-content/uploads/sites/1041/2022/03/day-care-page-header-blobs.svg');
    background-repeat: no-repeat;
    background-size: 50% 150%;
    background-position: right;
-   background-color: #f9f9f9;
+   background-color: #f6fdfe;
 
- }
+ } */
 
  /* === Header === */
- .header {
-   margin: 0 15%;
-   padding: 10px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 15px 40px;
-   font-family: Arial, sans-serif;
- }
+ 
 
-
- .header-left .header-h2 {
-   margin: 0;
-   font-size: 1.5rem;
-   color: #333;
- }
-
- .header-senter .header-ul {
-   list-style: none;
-   display: flex;
-   gap: 25px;
-   margin: 0;
-   padding: 0;
- }
-
- .header-senter .header-ul li a {
-   text-decoration: none;
-   color: #555;
-   font-size: 1rem;
-   text-transform: capitalize;
-   transition: color 0.3s ease;
- }
-
- .header-senter .header-ul li a:hover {
-   color: #007bff;
- }
-
- .right .header-button {
-   padding: 10px 18px;
-   border: none;
-   background-color: #b6b9bd;
-   color: white;
-   border-radius: 20px;
-   cursor: pointer;
-   font-size: 0.95rem;
-   transition: background-color 0.3s ease;
- }
-
- .right .header-button:hover {
-   background-color: #0056b3;
- }
-
- @media (max-width: 768px) {
-   .header {
-     flex-direction: column;
-     text-align: center;
-     gap: 10px;
-   }
-
-   .header-senter .header-ul {
-     flex-direction: column;
-     gap: 15px;
-   }
-
-   .right {
-     margin-top: 10px;
-   }
- }
-
- /* ===  men  ===*/
+ /* ===  main  ===*/
  .main {
    margin: 0 15%;
    padding: 10px;
@@ -1149,7 +1083,7 @@
 
  /* ===  section-11  === */
  .section-foot {
-  background-image: url(img/1.png);
+  background-image: url('/img/1.png');
   padding: 110px 20px;
   text-align: center;
   font-family: 'Outfit', sans-serif;

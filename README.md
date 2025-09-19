@@ -12,7 +12,7 @@
 
 
 
-- **Karan Bisht** — Full-Stack Web developer 
+- **Karan Bisht** — Full-Stack developer 
     GitHub: [https://github.com/Karanbisht40](https://github.com/Karanbisht40)
 
 - **Kartik Singh** — HTML5, CSS  

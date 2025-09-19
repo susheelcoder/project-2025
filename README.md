@@ -10,9 +10,7 @@
 - **vijay dhanik** — HTML and CSS  
   GitHub: [https://github.com/vijaydhanik](https://github.com/vijaydhanik)
 
-
-
-- **Karan Bisht** — Full-Stack developer 
+- **Karan Bisht** — Full-Stack developer
     GitHub: [https://github.com/Karanbisht40](https://github.com/Karanbisht40)
 
 - **Kartik Singh** — HTML5, CSS  

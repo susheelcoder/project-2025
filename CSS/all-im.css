@@ -24,11 +24,8 @@ button {
 
 .section-main {
   background-image: url('img/main.svg');
-<<<<<<< Updated upstream
    background-image: url('https://websitedemos.net/daycare-02/wp-content/uploads/sites/1041/2022/03/day-care-page-header-blobs.svg');
-=======
   background-image: url('https://websitedemos.net/daycare-02/wp-content/uploads/sites/1041/2022/03/day-care-page-header-blobs.svg');
->>>>>>> Stashed changes
   background-repeat: no-repeat;
   background-size: 50% 150%;
   background-position: right;
@@ -167,12 +164,7 @@ button {
 .text p {
   font-size: 30px;
 }
-=======
-   margin: 0 15%;
-   padding: 10px;
- }
 
->>>>>>> Stashed changes
 
 /* ===  footer  ==== */
 
@@ -305,8 +297,4 @@ button {
     .footer-social {
       justify-content: center;
     }
-<<<<<<< Updated upstream
   }
-=======
-  }
->>>>>>> Stashed changes

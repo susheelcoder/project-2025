@@ -34,7 +34,7 @@ button {
 
 /*=== header ===*/
 .header {
-  margin: 0 15%;
+  margin: 0 10%;
   padding: 10px;
   display: flex;
   display: flex;
@@ -163,7 +163,7 @@ button {
 /* ========== page-section  ================*/
  .page-section {
    background-color: #f6fdfe;
-   margin: 0 15%;
+   margin: 0 12%;
    padding: 10px;
  }
 

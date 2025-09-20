@@ -18,7 +18,7 @@
 - **Kartik Singh** — HTML5, CSS  
  GitHub: [https://github.com/kartiksingh3129-bit](https://github.com/kartiksingh3129-bit)
 
-
+ GitHub: [https://github.com/utkarsh0503](https://github.com/utkarsh0503)
 
 ## 🧭 Project Goals
 1. Clean, maintainable codebase with modular architecture.  

@@ -1286,9 +1286,8 @@
 .section-6-up,
 .section-6-down {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 /* ---------- Responsive tweaks ---------- */
@@ -1422,16 +1421,21 @@
 
 .section-8-left h3,
 .section-8-right h3 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   text-align: center;
   color: #706d6dc1;
 }
 
 .section-8-left p,
 .section-8-right p {
+  color: #524f4fb2;
+  margin-top: 10px;
   font-size: 1rem;
   text-align: center;
   line-height: 1.6;
+}
+.section-8 hr{
+  margin: 20px;
 }
 
 /* ---------- Mini-Desktop (1280px ≤ width < 992px) ---------- */

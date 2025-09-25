@@ -1,49 +1,187 @@
- @media (max-width: 768px) {
-        .hamburger {
-            display: flex;
-        }
 
-        #nav-part2 {
-            position: fixed;
-            top: 0;
-            right: -200px;
-            width: 180px;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.95);
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 80px 15px 20px;
-            gap: 10px;
-            transition: right 0.3s ease;
-            z-index: 100;
-        }
 
-        #nav-part2.active {
-            right: 0;
-        }
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
 
-        #nav-part2 h4 {
-            width: 100%;
-            text-align: left;
-            padding: 10px 0;
-            border: none;
-            font-size: 16px;
-        }
+  /* NAVIGATION */
+  nav {
+    padding: 2vw 4vw;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.3);
+    justify-content: space-evenly;
+  }
 
-        .desktop-btn {
-            display: none;
-        }
+  .logo {
+    width: 120px;
+    height: auto;
+  }
 
-        .mobile-btn {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #d4a94f;
-            padding: 10px 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            border-radius: 3px;
-            width: 100%;
-            text-align: center;
-        }
+  #nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+  }
+
+  #nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #ffffff3c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #ffffffd4;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  #nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d4a94f;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    z-index: 1;
+  }
+
+  #nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+  }
+
+  #nav-part2 h4 a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+  }
+
+  .btn-top {
+    background-color: #d4a94f;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+  }
+
+  /* HERO CONTENT */
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.3;
+    font-family: 'Lagency', serif;
+  }
+
+  .btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #d4a94f;
+    padding: 15px 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  /* HAMBURGER 3 DOTS */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+  .hamburger span {
+    width: 16px;
+    height: 2px;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 768px) {
+
+    nav {
+      display: flex;
+      position: fixed;
+      flex-direction: row;
     }
+
+    .hamburger {
+      display: flex;
+      margin-left: auto;
+      margin-top: 15px;
+    }
+
+    #nav-part2 {
+      position: fixed;
+      top: 0;
+      right: -200px;
+      width: 180px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 80px 15px 20px;
+      gap: 10px;
+      transition: right 0.3s ease;
+      z-index: 100;
+    }
+
+    #nav-part2.active {
+      right: 0;
+    }
+
+    #nav-part2 h4 {
+      width: 100%;
+      text-align: left;
+      padding: 10px 0;
+      border: none;
+      font-size: 16px;
+    }
+
+    .desktop-btn {
+      display: none;
+    }
+
+    .mobile-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #d4a94f;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 3px;
+      width: 100%;
+      text-align: center;
+    }
+  }

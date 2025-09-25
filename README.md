@@ -1,12 +1,12 @@
 
 ---
 ## 👥 Team
-- **Susheel** — Project Lead / Maintainer  
+- **Susheel** — Project Lead   
   GitHub: [https://github.com/susheelcoder](https://github.com/susheelcoder)
 
 
-  <!-- - **Shivam** — Developer  
-  GitHub: [https://github.com/Shivam-pal-88102](https://github.com/Shivam-pal-88102) -->
+  - **kamaljoshi** — html css  
+  GitHub: [https://github.com/kamaljoshi2645](https://github.com/kamaljoshi2645)
 
 <!-- - **Shivam** — Developer  
   GitHub: [https://github.com/Shivam-pal-88102](https://github.com/Shivam-pal-88102) -->

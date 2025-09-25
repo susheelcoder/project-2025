@@ -1,3 +1,9 @@
+function toggleMenu() {
+  document.getElementById('nav-part2').classList.toggle('active');
+}
+
+
+
 // Locomotive Scroll Initialization
 const scroll = new LocomotiveScroll({
   el: document.querySelector('#main'),

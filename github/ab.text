@@ -1,0 +1,85 @@
+
+
+   <!-- body -->
+<body>
+
+  <!-- header -->
+  <header>
+    <nav></nav>
+  </header>
+
+  <!-- main -->
+  <main>
+    <article>  <!-- not not compulsory --> 
+      <section> <!-- section -->
+        <aside> </aside>
+        <div> </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- footer -->
+  <footer>
+  </footer>
+
+</body>
+
+
+
+[(Precious Moments Safaris)]
+     folder--(github)
+     folder -(img/video)
+     folder--(CSS)
+     folder--(JS)
+     index.html
+     our-story.html
+     experiences.html
+     destinations.html
+     about.html
+     contact.html
+     {Book-Today.html}
+     {booking.html}
+
+    folder-(Explore More Details)
+         folder--(CSS)
+         folder--(JS)
+         01-Day-name.html
+         02-Day-name.html
+         03-Day-name.html
+         04-Day-name.html
+         05-Day-name.html
+         06-Day-name.html
+         07-Day-name.html
+         08-Day-name.html
+         09-Day-name.html
+         10-Day-name.html
+         11-Day-name.html
+         12-Day-name.html
+
+         
+    folder-(Explore Our National Parks)
+         folder--(CSS)
+         folder--(JS)
+         Serengeti.html
+         Saadani.html
+         Katavi.html
+         Mahale.html
+         Ngorongoro.html
+         Zanzibar.html
+         Lake.html
+         Tarangire.html
+         Nyerere.html
+         Ruaha.html
+            
+          
+    folder(QUICK LINKS)
+          folder--(CSS)
+          folder--(JS)
+          Top-Safari-Packages.html
+          Mount-Kilimanjaro-Treks.html
+          Zanzibar-Holidays.html
+          Travel-Guide.html
+          Terms-&-Conditions.html
+          Payment-and-Refund-policy.html
+          FAQs.html
+

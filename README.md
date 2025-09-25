@@ -31,3 +31,39 @@
 ---
 ## 📁 Repository Structure (suggested)
 
+Precious-Moments-Safaris/
+│
+├── index.html
+├── our-story.html
+├── experiences.html
+├── destinations.html
+├── about.html
+├── contact.html
+├── book-today.html         ← (unify naming, avoid curly braces)
+├── booking.html            ← (remove if duplicate)
+│
+├── css/                    ← General/global styles
+├── js/                     ← General/global scripts
+│
+├── explore-more-details/
+│   ├── css/
+│   ├── js/
+│   ├── day-01.html
+│   ├── day-02.html
+│   └── ...
+│
+├── explore-our-national-parks/
+│   ├── css/
+│   ├── js/
+│   ├── serengeti.html
+│   ├── ngorongoro.html
+│   └── ...
+│
+├── quick-links/
+│   ├── css/
+│   ├── js/
+│   ├── top-safari-packages.html
+│   ├── mount-kilimanjaro-treks.html
+│   └── ...
+│
+└── assets/                 ← Optional folder for images, fonts, icons

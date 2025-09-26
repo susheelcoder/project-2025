@@ -1016,7 +1016,8 @@ footer a:hover {
   }
 
   .footer-col {
-    margin: 15px 0;
+    margin: auto;
+    flex: 0 0 auto;
   }
 }
 

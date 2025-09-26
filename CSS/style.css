@@ -148,7 +148,7 @@ nav {
 
     .hamburger {
         display: flex;
-        /* show dots on mobile */
+        margin-top: 12px;
     }
 
     #nav-part2 {
@@ -156,7 +156,6 @@ nav {
         top: 0;
         right: -200px;
         width: 180px;
-        /* narrow panel */
         height: 100vh;
         background: rgba(0, 0, 0, 0.95);
         flex-direction: column;
@@ -195,5 +194,103 @@ nav {
         border-radius: 3px;
         width: 100%;
         text-align: center;
+    }
+}
+
+
+/* -------- */
+
+@media (max-width: 768px) {
+    .hero {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .bg-video {
+        position: absolute;
+        top: 58px;
+        left: 0px;
+        width: 100vw;
+        height: 43vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    #page4-right {
+        margin-top: 20px;
+        height: 100%;
+    }
+
+    .safari-points {
+        margin-bottom: 60px;
+        margin: 10px 25px 45px 21px;
+        gap: 0px;
+    }
+
+    #page5 {
+        background-color: #fff;
+        padding: 0;
+        text-align: center;
+    }
+
+    .values-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 0px;
+        flex-wrap: wrap;
+    }
+
+    #page6 {
+        height: 84vh;
+        width: 100%;
+        background-color: #f4f2f2;
+        position: relative;
+    }
+
+
+    #page-safaris {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 56px 13px;
+        background: #fff;
+        flex-wrap: wrap;
+    }
+
+    #testimonials {
+        padding: 30px 40px 48px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .park-item img {
+        width: 259px;
+        height: 104px;
+    }
+
+    .tailor-hero {
+        position: relative;
+        height: 335px;
+    }
+
+    /* .btn-main, */
+    /* .btn-safari, */
+    .book-button {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-left: 110px;
+    }
+
+    footer {
+        background-color: #000;
+        color: white;
+        padding: 10px 10px;
+        /* height: 100%; */
+        /* width: 100%; */
     }
 }

@@ -1005,15 +1005,14 @@ footer a:hover {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 
-  .park-item img {
+  /* .park-item img {
     width: 140px;
     height: 120px;
-  }
+  } */
 
   .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
   }
 
   .footer-col {
@@ -1043,10 +1042,10 @@ footer a:hover {
     font-size: 18px;
   }
 
-  .park-item img {
+  /* .park-item img {
     width: 120px;
     height: 100px;
-  }
+  } */
 
   .btn-main,
   .btn-safari,

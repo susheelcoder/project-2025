@@ -49,6 +49,13 @@ body, html {
   width: 100%;
   z-index: 0;
 }
+.hero{
+  min-height: 80px;
+  background:;
+}
+.nav a{
+  color: #ffffff;
+}
 
 .ero h1 {
   font-size: 3em;

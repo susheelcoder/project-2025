@@ -197,3 +197,71 @@ nav {
         text-align: center;
     }
 }
+
+
+
+/* /////// our story//////// */
+
+
+@media (max-width: 768px) {
+    #page1-content #right-1 p {
+        width: 80%;
+        margin-left: 10%;
+        font-size: 14px;
+    }
+
+
+.photo-card {
+    width: auto;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+}
+
+/* /////// destinition.html//////// */
+
+@media (max-width: 768px){
+    nav {
+    
+        position: absolute;
+     
+}
+}
+/* /////// kliminjro.html//////// */
+@media (max-width: 768px){
+    .py-20 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+.py-20 {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.py-20 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+     
+}
+
+/* /////// kliminjro.html//////// */
+@media (max-width: 768px){
+.py-10 {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+}
+
+
+
+
+
+
+

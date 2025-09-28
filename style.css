@@ -922,7 +922,7 @@ footer a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
   nav {
     flex-direction: column;
     gap: 15px;
@@ -958,6 +958,11 @@ footer a:hover {
   .tailor-overlay {
     padding: 20px;
     text-align: center;
+  }
+
+  .park-item img {
+    width: 98%;
+    height: auto;
   }
 }
 
@@ -1011,17 +1016,18 @@ footer a:hover {
   } */
 
   .footer-container {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
   }
 
-  .footer-col {
-    margin: auto;
-    flex: 0 0 auto;
+
+
+  .foo {
+    display: flex;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .hero-content h1 {
     font-size: 1.2em;
   }
@@ -1054,4 +1060,6 @@ footer a:hover {
     padding: 10px 20px;
     font-size: 14px;
   }
+
+
 }

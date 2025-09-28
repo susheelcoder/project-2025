@@ -530,3 +530,17 @@ footer a:hover {
   }
 }
 
+/* ------------------ */
+
+@media (max-width: 1024px) {
+    
+.hero {
+    position: relative;
+    height: 57vh;
+    width: 100%;
+}
+
+
+
+
+}

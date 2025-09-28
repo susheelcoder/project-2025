@@ -26,7 +26,7 @@ html {
   z-index: 0;
   background-image: url('./images/PreciousMomentsStory-1300x800.jpeg');
   background-size: cover;
-  background-position: center center; 
+  background-position: center center;
 }
 
 .hero-content h1 {
@@ -188,7 +188,7 @@ footer a:hover {
   padding: 10vh 10vw;
 }
 
-#page1 > h1 {
+#page1>h1 {
   font-size: 2vw;
   color: #000;
   line-height: 5vw;
@@ -196,7 +196,7 @@ footer a:hover {
   text-align: center;
 }
 
-#page1 > h2 {
+#page1>h2 {
   font-size: 5vw;
   line-height: 3vw;
   border-bottom: 1px solid #000000;
@@ -252,12 +252,15 @@ footer a:hover {
 .photo-card:nth-child(2) {
   transform: rotate(2deg);
 }
+
 .photo-card:nth-child(3) {
   transform: rotate(-1.5deg);
 }
+
 .photo-card:nth-child(4) {
   transform: rotate(1.5deg);
 }
+
 .photo-card:nth-child(5) {
   transform: rotate(-1deg);
 }
@@ -297,6 +300,7 @@ footer a:hover {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -305,8 +309,7 @@ footer a:hover {
 .tailor-hero {
   position: relative;
   height: 400px;
-  background: url("https://images.pexels.com/photos/5858977/pexels-photo-5858977.jpeg")
-    no-repeat center center;
+  background: url("https://images.pexels.com/photos/5858977/pexels-photo-5858977.jpeg") no-repeat center center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -350,7 +353,7 @@ footer a:hover {
   color: white;
   text-align: center;
   padding: 150px 20%;
-  background-position: center center; 
+  background-position: center center;
   background-size: cover;
 }
 
@@ -405,44 +408,55 @@ footer a:hover {
     margin-left: 5%;
     margin-right: 5%;
   }
-  #page1 > h1 {
+
+  #page1>h1 {
     font-size: 5vw;
     line-height: 6vw;
   }
-  #page1 > h2 {
+
+  #page1>h2 {
     font-size: 6vw;
     line-height: 6vw;
     padding-bottom: 3vh;
   }
+
   #page1-content {
     flex-direction: column;
     gap: 20px;
   }
+
   #page1-content #right-1 p {
     width: 90%;
     margin-left: 5%;
     font-size: 14px;
   }
+
   .tailor-content h1 {
     font-size: 28px;
   }
+
   .tailor-content p {
     font-size: 14px;
   }
+
   .book-button {
     padding: 10px 20px;
     font-size: 14px;
   }
+
   .ero {
     padding: 100px 10%;
   }
+
   .ero h1 {
     font-size: 2rem;
   }
+
   #page #video-container {
     height: 50vh;
     border-radius: 10%;
   }
+
   #page #video-container #play {
     font-size: 12px;
     padding: 2vw 2vw;
@@ -455,44 +469,55 @@ footer a:hover {
     margin-left: 10%;
     margin-right: 10%;
   }
-  #page1 > h1 {
+
+  #page1>h1 {
     font-size: 6vw;
     line-height: 7vw;
   }
-  #page1 > h2 {
+
+  #page1>h2 {
     font-size: 7vw;
     line-height: 7vw;
     padding-bottom: 4vh;
   }
+
   #page1-content {
     flex-direction: column;
     gap: 25px;
   }
+
   #page1-content #right-1 p {
     width: 85%;
     margin-left: 7.5%;
     font-size: 16px;
   }
+
   .tailor-content h1 {
     font-size: 32px;
   }
+
   .tailor-content p {
     font-size: 15px;
   }
+
   .book-button {
     padding: 10px 25px;
     font-size: 15px;
   }
+
   .ero {
     padding: 120px 15%;
   }
+
   .ero h1 {
     font-size: 2.5rem;
   }
+
   #page #video-container {
     height: 60vh;
     border-radius: 15%;
   }
+
   #page #video-container #play {
     font-size: 14px;
     padding: 2.5vw 2vw;
@@ -505,28 +530,79 @@ footer a:hover {
     margin-left: 15%;
     margin-right: 15%;
   }
-  #page1 > h1 {
-    font-size: 1.8vw;
-    line-height: 5vw;
+
+  #page1>h1 {
+    font-size: 2.8vw;
+    line-height: 10vw;
   }
-  #page1 > h2 {
+
+  #page1>h2 {
     font-size: 4.5vw;
     line-height: 5vw;
     padding-bottom: 5vh;
   }
+
   #page1-content #right-1 p {
     width: 80%;
     margin-left: 10%;
     font-size: 14px;
   }
+
   .tailor-content h1 {
     font-size: 34px;
   }
+
   .tailor-content p {
     font-size: 16px;
   }
+
   .ero {
     padding: 140px 20%;
   }
 }
 
+/* //////////////////// */
+@media (max-width: 680px) {
+  #hero {
+    position: relative;
+    height: 64vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  #page1 {
+    min-height: 30vh;
+    width: 100%;
+    background-color: #fff;
+    padding: 0vh 1vw;
+  }
+
+  #page1-content #right-1 p {
+    width: 98%;
+    margin-left: 0%;
+    font-size: 15px;
+  }
+
+  .photo-card {
+    width: 99%;
+    background: #fffaf0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    transform: rotate(-2deg);
+    margin-bottom: 0px;
+    margin-top: -3px;
+  }
+
+  footer {
+    background-color: #000;
+    color: white;
+    padding: 0px 1px;
+  }
+
+  .foo {
+    display: flex;
+  }
+}

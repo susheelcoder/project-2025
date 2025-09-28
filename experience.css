@@ -16,9 +16,9 @@
 @font-face {
   font-family: 'Lagency';
   src: url('./Lagency-Regular.woff2') format('woff2'),
-       url('./fonts/Lagency-Regular.woff') format('woff'),
-       url('.Lagency-Regular.ttf') format('truetype'),
-       url('.Lagency-Regular.otf') format('opentype');
+    url('./fonts/Lagency-Regular.woff') format('woff'),
+    url('.Lagency-Regular.ttf') format('truetype'),
+    url('.Lagency-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -30,7 +30,8 @@
   font-family: 'HelveticaNeueMedium', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body, html {
+body,
+html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: 100%;
   overflow-x: hidden;
@@ -212,7 +213,8 @@ nav {
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -267,7 +269,8 @@ nav {
   color: #c89d45;
 }
 
-.description, .card-back p {
+.description,
+.card-back p {
   font-size: 15px;
   color: #666;
   margin: 16px 0;
@@ -663,20 +666,20 @@ input[type="range"] {
   .hero-content h1 {
     font-size: 2.5em;
   }
-  
+
   .tailor-overlay {
     padding: 30px 40px;
   }
-  
+
   .tailor-content h1 {
     font-size: 32px;
   }
-  
+
   .layout {
     padding: 30px 20px;
     gap: 30px;
   }
-  
+
   #page6>#text3>h1 {
     font-size: 60px;
   }
@@ -690,83 +693,83 @@ input[type="range"] {
     gap: 15px;
     align-items: center;
   }
-  
+
   .logo {
     width: 100px;
   }
-  
+
   #nav-part2 {
     gap: 15px;
     justify-content: center;
   }
-  
+
   #nav-part2 h4 {
     font-size: 16px;
     padding: 8px 16px;
   }
-  
+
   .hero-content h1 {
     font-size: 2em;
     padding: 0 15px;
   }
-  
+
   .layout {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 20px 15px;
     gap: 20px;
   }
-  
+
   .experience-card {
     max-width: 280px;
     height: 450px;
   }
-  
+
   .tailor-hero {
     height: 400px;
   }
-  
+
   .tailor-overlay {
     flex-direction: column;
     text-align: center;
     padding: 20px 30px;
     gap: 15px;
   }
-  
+
   .tailor-content h1 {
     font-size: 28px;
   }
-  
+
   #page6>#text3>h1 {
     font-size: 50px;
   }
-  
+
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .footer-col {
     margin: 15px 0;
   }
-  
+
   .filters {
     flex-direction: column;
   }
-  
+
   .filter-group {
     width: 100%;
   }
-  
+
   .filter-section {
     padding: 1.5rem;
     margin: 1.5rem 15px;
   }
-  
+
   .card-container {
     width: 100%;
     max-width: 280px;
   }
-  
+
   .flip-card {
     height: 350px;
   }
@@ -778,125 +781,125 @@ input[type="range"] {
     font-size: 1.8em;
     line-height: 1.2;
   }
-  
+
   nav {
     padding: 4vw 6vw;
   }
-  
+
   .logo {
     width: 80px;
   }
-  
+
   #nav-part2 h4 {
     font-size: 14px;
     padding: 6px 12px;
   }
-  
+
   .btn-top {
     padding: 8px 16px;
     font-size: 14px;
   }
-  
+
   .layout {
     grid-template-columns: 1fr;
     padding: 15px 10px;
     gap: 15px;
   }
-  
+
   .experience-card {
     max-width: 100%;
     height: 400px;
   }
-  
+
   .experience-info {
     padding: 15px;
   }
-  
+
   .experience-info h2 {
     font-size: 20px;
   }
-  
+
   .info-grid {
     padding: 0 10px;
     font-size: 14px;
   }
-  
+
   .price {
     font-size: 18px;
   }
-  
+
   .tailor-overlay {
     padding: 15px 20px;
   }
-  
+
   .tailor-content h1 {
     font-size: 24px;
   }
-  
+
   .tailor-content p {
     font-size: 15px;
   }
-  
+
   .book-button {
     padding: 10px 25px;
     font-size: 14px;
   }
-  
+
   #page6 {
     height: 15vh;
   }
-  
+
   #page6>#text3>h1 {
     font-size: 36px;
   }
-  
+
   #page6>#text3>h3 {
     font-size: 14px;
   }
-  
+
   footer {
     padding: 40px 20px;
   }
-  
+
   .footer-logo {
     width: 120px;
   }
-  
+
   .about h3 {
     font-size: 22px;
   }
-  
+
   .about p {
     font-size: 15px;
   }
-  
+
   .filter-section {
     padding: 1rem;
     margin: 1rem 10px;
   }
-  
+
   .filter-section h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
-  
+
   .checkbox-group {
     gap: 0.8rem 1rem;
   }
-  
+
   .checkbox-group label {
     font-size: 0.9rem;
   }
-  
+
   .filter-btn {
     padding: 0.7rem 1rem;
     width: 100%;
   }
-  
+
   .button-group {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .btn {
     padding: 12px 30px;
     font-size: 16px;
@@ -904,13 +907,27 @@ input[type="range"] {
     max-width: 200px;
     text-align: center;
   }
-  
+
   .flip-card {
     height: 320px;
   }
-  
+
   .flip-card-front img {
     height: 150px;
+  }
+
+  footer {
+    background-color: #000;
+    color: white;
+    padding: 0px 1px;
+  }
+
+  .foo {
+    display: flex;
+  }
+
+  .footer-col {
+    margin: 0px 0;
   }
 }
 
@@ -919,23 +936,23 @@ input[type="range"] {
   .hero-content h1 {
     font-size: 1.5em;
   }
-  
+
   .layout {
     padding: 10px 5px;
   }
-  
+
   .experience-card {
     height: 380px;
   }
-  
+
   #page6>#text3>h1 {
     font-size: 28px;
   }
-  
+
   .tailor-content h1 {
     font-size: 20px;
   }
-  
+
   .filter-section {
     margin: 1rem 5px;
   }

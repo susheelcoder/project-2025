@@ -197,3 +197,19 @@ nav {
         text-align: center;
     }
 }
+
+
+/* ///////////////////////////// */
+
+@media (max-width: 480px) {
+
+
+  .hero {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+}

@@ -30,6 +30,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body,
 html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +43,9 @@ html {
 #main {
   width: 100%;
   overflow: hidden;
-} /* Hero Section */
+}
+
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -50,6 +53,7 @@ html {
   overflow: hidden;
   z-index: 0;
 }
+
 .hero-content h1 {
   font-size: 3em;
   font-weight: bold;
@@ -274,7 +278,7 @@ h1 {
   margin-top: -8%;
 }
 
-#page10 > h1 {
+#page10>h1 {
   font-size: 5vw;
   color: #000;
   /* background-color: red; */
@@ -371,6 +375,7 @@ h1 {
   color: #222;
   font-weight: 700;
 }
+
 .destination-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -403,11 +408,13 @@ h1 {
   text-align: center;
   margin-left: 50%;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+
 .grid h1 {
   font-size: 24px;
   margin: 0;
@@ -465,6 +472,7 @@ h1 {
     padding: 16px;
   }
 }
+
 footer {
   background-color: #000;
   color: white;
@@ -513,16 +521,20 @@ footer {
   width: 150px;
   margin-bottom: 15px;
 }
+
 footer a {
-  color: #ffffff; /* or your brand color like #F4A261 or #E9C46A */
+  color: #ffffff;
+  /* or your brand color like #F4A261 or #E9C46A */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #f4a261; /* Example hover color */
+  color: #f4a261;
+  /* Example hover color */
   text-decoration: underline;
 }
+
 /* ==================== RESPONSIVE MEDIA QUERIES ==================== */
 
 /* Large Desktops / Laptops */
@@ -530,22 +542,27 @@ footer a:hover {
   .hero-content h1 {
     font-size: 3.2rem;
   }
+
   h1 {
     font-size: 38px;
   }
+
   .service-box {
     height: 220px;
   }
-  #page10 > h1 {
+
+  #page10>h1 {
     font-size: clamp(2rem, 4.5vw, 4rem);
     line-height: 1.3;
   }
+
   #page10-content #right-10 p {
     font-size: clamp(1rem, 2.2vw, 1.8rem);
     width: 100%;
     margin-left: 0;
     text-align: center;
   }
+
   .grid {
     gap: 25px;
   }
@@ -556,28 +573,35 @@ footer a:hover {
   .hero-content h1 {
     font-size: 2.8rem;
   }
+
   h1 {
     font-size: 34px;
   }
+
   .service-box {
     height: auto;
     padding: 20px;
   }
-  #page10 > h1 {
+
+  #page10>h1 {
     font-size: clamp(1.8rem, 5vw, 3.5rem);
   }
+
   #page10-content {
     flex-direction: column;
     padding: 5vh 0;
     gap: 20px;
   }
+
   #page10-content #right-10 p {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
   }
+
   .destination-grid {
     grid-template-columns: 1fr 1fr;
     gap: 25px;
   }
+
   .ext {
     padding: 20px;
   }
@@ -588,43 +612,53 @@ footer a:hover {
   .hero-content h1 {
     font-size: 2.4rem;
   }
+
   h1 {
     font-size: 30px;
   }
-  #page10 > h1 {
+
+  #page10>h1 {
     font-size: clamp(1.6rem, 6vw, 3rem);
   }
+
   #page10-content #right-10 p {
     font-size: clamp(0.95rem, 3vw, 1.3rem);
     width: 100%;
     margin-left: 0;
     text-align: center;
   }
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .destination-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .ext {
     font-size: 15px;
     padding: 15px;
     margin-left: 0;
   }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
     gap: 20px;
     text-align: center;
   }
+
   .footer-col {
     margin: 10px 0;
   }
+
   .card {
     height: auto;
   }
+
   .card .overlay {
     font-size: 16px;
     padding: 14px;
@@ -636,34 +670,43 @@ footer a:hover {
   .hero-content h1 {
     font-size: 2rem;
   }
+
   h1 {
     font-size: 26px;
   }
-  #page10 > h1 {
+
+  #page10>h1 {
     font-size: clamp(1.4rem, 6vw, 2.5rem);
     line-height: 1.2;
   }
+
   #page10-content #right-10 p {
     font-size: clamp(0.9rem, 3.5vw, 1.2rem);
   }
+
   .services-grid {
     gap: 15px;
   }
+
   .destination-grid {
     gap: 15px;
   }
+
   .ext {
     font-size: 14px;
     padding: 12px;
   }
+
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
+
   .footer-col {
     width: 100%;
     margin: 10px 0;
   }
+
   .card .overlay {
     font-size: 14px;
     padding: 12px;
@@ -675,29 +718,47 @@ footer a:hover {
   .hero-content h1 {
     font-size: 1.8rem;
   }
+
   h1 {
     font-size: 22px;
   }
-  #page10 > h1 {
+
+  #page10>h1 {
     font-size: 5.5vw;
   }
+
   #page10-content #right-10 p {
     font-size: 4vw;
   }
+
   .services-grid,
   .destination-grid {
     gap: 12px;
   }
+
   .ext {
     font-size: 13px;
     padding: 10px;
   }
+
   .card .overlay {
     font-size: 12px;
     padding: 10px;
   }
+
   .footer-col {
     width: 100%;
     margin: 8px 0;
   }
+}
+
+
+@media (max-width: 400px) {
+
+  .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 29px 20px;
+  }
+  
 }

@@ -388,3 +388,15 @@ nav {
         flex-direction: column;
     }
 }
+
+
+@media (max-width:400PX) {
+
+    .park-item {
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        display: block;
+        border: 3px solid #a14c4c33;
+    }
+}

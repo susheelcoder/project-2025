@@ -745,7 +745,9 @@ input[type="range"] {
 
   .footer-container {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
+    width: 100%;
+    margin: 5px 0px 0px 5px;
   }
 
   .footer-col {

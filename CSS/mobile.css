@@ -133,6 +133,10 @@ nav {
     display: block;
 }
 
+.foo {
+    display: flex;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     nav {
@@ -204,12 +208,12 @@ nav {
 @media (max-width: 480px) {
 
 
-  .hero {
-    position: relative;
-    height: 65vh;
-    width: 100%;
-    overflow: hidden;
-    z-index: 0;
-  }
+    .hero {
+        position: relative;
+        height: 65vh;
+        width: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
 
 }

@@ -133,6 +133,10 @@ nav {
     display: block;
 }
 
+.foo {
+    display: flex;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     nav {

@@ -771,3 +771,8 @@ nav {
         /* justify-content: space-between; */
     }
 }
+@media (max-width: 400px){
+  .gallery .item {
+    margin left: -5px:
+  }
+}

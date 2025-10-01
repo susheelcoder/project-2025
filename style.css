@@ -43,7 +43,8 @@ html {
 /* Main Wrapper */
 #main {
   width: 100%;
-  overflow: hidden;
+  /* allow content to flow (some pages used hidden which caused desktop clipping) */
+  overflow: visible;
 }
 
 /* Hero Section */
@@ -51,7 +52,8 @@ html {
   position: relative;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  /* allow children to be visible above background video */
+  overflow: visible;
   z-index: 0;
 }
 
@@ -63,7 +65,21 @@ html {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
+  /* send the video further back so hero content and nav sit above it */
+  z-index: -2;
+}
+
+/* Ensure hero's direct children (content, nav) are rendered above background video */
+.hero > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* Fallback background for small screens (video heavy) */
+.hero.has-bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -319,6 +335,19 @@ nav {
   opacity: 0.8;
   transition: 0.3s ease;
   cursor: pointer;
+}
+
+/* Make the image grid responsive and fluid */
+@media (max-width: 1100px) {
+  .image-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 160px; }
+}
+
+@media (max-width: 768px) {
+  .image-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+}
+
+@media (max-width: 480px) {
+  .image-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
 }
 
 #page5 {

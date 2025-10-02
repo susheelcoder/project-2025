@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <link rel="stylesheet" href="about.css" />
-   <link rel="stylesheet" href="CSS/mobile.css" />
+  <link rel="stylesheet" href="CSS/mobile.css" />
+  <link rel="stylesheet" href="CSS/mobile-fixes.css" />
 </head>
 <body>
 
@@ -241,6 +242,24 @@ Join us and discover the magic of Tanzania and Zanzibar, all while making a posi
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="script.js"></script> 
+
+  <script>
+    // Make flip-boxes toggle on touch/click for mobile
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.flip-box').forEach(box => {
+        // make keyboard-focusable
+        box.setAttribute('tabindex', '0');
+        box.addEventListener('click', () => box.classList.toggle('flipped'));
+        box.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); box.classList.toggle('flipped'); } });
+      });
+
+      // If page has no video in hero, add .has-bg so mobile-fixes can show a fallback
+      const hero = document.querySelector('.hero');
+      if (hero && !hero.querySelector('.bg-video')) {
+        hero.classList.add('has-bg');
+      }
+    });
+  </script>
 
   
 </body>

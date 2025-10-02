@@ -36,6 +36,17 @@ body, html {
   font-family: 'HelveticaNeueMedium', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Page-specific overrides to ensure content is visible on desktop (some global rules use overflow:hidden) */
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+#main {
+  /* allow the page to scroll normally on desktop and avoid clipping content */
+  overflow: visible !important;
+}
+
 /* Main Wrapper */
 #main {
   width: 100%;
@@ -45,9 +56,26 @@ body, html {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  /* allow hero to size but not force full viewport height which can hide content behind overlays on desktop */
+  min-height: 50vh;
+  height: auto;
   width: 100%;
   z-index: 0;
+}
+
+.hero .bg-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2; /* keep video behind everything */
+}
+
+.hero > * {
+  position: relative;
+  z-index: 3; /* ensure hero content (nav/title) appears above the video */
 }
 
 .ero h1 {
@@ -165,6 +193,17 @@ nav {
   padding: 100px 80px;
   align-items: flex-start;
   justify-content: center;
+}
+
+/* Ensure these main content areas are above the hero/video and have an explicit background so they're visible on desktop */
+.section,
+.about,
+.adventure-section,
+#page10,
+.video-section {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
 }
 
 .left-col {
@@ -380,7 +419,9 @@ leader h1 {
 .lero {
   background: url('./IMG_2587.JPG') center/cover no-repeat;
   color: #fff;
-  padding: 700px 40px 40px;
+  /* use a responsive min-height instead of huge fixed padding so mobile looks correct */
+  padding: 60px 40px;
+  min-height: 360px;
   text-align: center;
   position: relative;
   background-size: cover;
@@ -437,6 +478,21 @@ leader h1 {
   image-orientation: from-image;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Make images and videos behave on small screens */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Flip boxes: also support a .flipped class for touch devices */
+.flip-box.flipped .flip-box-inner,
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box { touch-action: manipulation; }
 
 .video-container {
   display: flex;

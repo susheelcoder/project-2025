@@ -1,12 +1,37 @@
 // header
 function toggleMenu() {
-  document.getElementById('nav-part2').classList.toggle('active');
+  const nav = document.getElementById('nav-part2');
+  nav.classList.toggle('active');
+  // lock body scroll when mobile menu is open
+  if (nav.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
 }
 
 // Locomotive Scroll Initialization
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('#main'),
-  smooth: true
+let scroll = null;
+function initLocomotive() {
+  // create only on larger screens for performance
+  if (window.innerWidth > 900 && typeof LocomotiveScroll !== 'undefined') {
+    if (!scroll) {
+      scroll = new LocomotiveScroll({ el: document.querySelector('#main'), smooth: true });
+    }
+  } else {
+    if (scroll) {
+      try { scroll.destroy(); } catch (e) { /* ignore */ }
+      scroll = null;
+    }
+  }
+}
+// initialize on load
+initLocomotive();
+// re-init on resize (debounced)
+let _resizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(initLocomotive, 200);
 });
 
 // Page 4 Hover Image Animation
@@ -59,6 +84,29 @@ function menuAnimation() {
     }
   });
 }
+
+// Close mobile nav when clicking outside or pressing Escape
+document.addEventListener('click', (e) => {
+  const nav = document.getElementById('nav-part2');
+  const hamburger = document.querySelector('.hamburger');
+  if (!nav || !nav.classList) return;
+  if (nav.classList.contains('active')) {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const nav = document.getElementById('nav-part2');
+    if (nav && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+});
 
 // Loader Animation
 function loaderAnimation() {
@@ -116,3 +164,40 @@ const swiper = new Swiper('.swiper-container', {
     1024: { slidesPerView: 3 }
   }
 });
+
+// --- Global mobile fixes injected at runtime ---
+(function globalMobileFixes() {
+  try {
+    // Inject a small critical CSS override to ensure bg-video displays on small screens
+    const styleId = 'pm-mobile-video-fix';
+    if (!document.getElementById(styleId)) {
+      const style = document.createElement('style');
+      style.id = styleId;
+      style.innerHTML = `@media (max-width:900px){ .bg-video{display:block !important;width:100vw !important;height:40vh !important;object-fit:cover !important;} .hero{min-height:40vh !important;height:auto !important;} }`;
+      document.head.appendChild(style);
+    }
+
+    // Ensure all navs have a hamburger element for consistent behavior
+    document.querySelectorAll('nav').forEach(nav => {
+      if (!nav.querySelector('.hamburger')) {
+        const ham = document.createElement('div');
+        ham.className = 'hamburger';
+        ham.setAttribute('role', 'button');
+        ham.setAttribute('aria-label', 'Open navigation');
+        ham.tabIndex = 0;
+        ham.innerHTML = '<span></span><span></span><span></span>';
+        // insert before nav-part2 if present, otherwise append
+        const navPart = nav.querySelector('#nav-part2');
+        if (navPart) nav.insertBefore(ham, navPart);
+        else nav.appendChild(ham);
+
+        // wire up click & keyboard
+        ham.addEventListener('click', toggleMenu);
+        ham.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); } });
+      }
+    });
+  } catch (e) {
+    // don't break the rest of the script
+    console.warn('mobile fixes failed', e);
+  }
+})();

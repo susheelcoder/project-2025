@@ -1,3 +1,19 @@
+/* Desktop navigation fix: horizontal layout, not overlay */
+@media (min-width: 901px) {
+  #nav-part2 {
+    position: static !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: none !important;
+    flex-direction: row !important;
+    height: auto !important;
+    box-shadow: none !important;
+    z-index: 1 !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
 /* Reset & Base */
 @font-face {
   font-family: 'HelveticaNeueMedium';

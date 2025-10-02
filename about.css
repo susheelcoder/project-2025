@@ -1,4 +1,91 @@
 /* Reset & Base */
+/* Mobile improvements for images/about.html */
+@media (max-width: 900px) {
+  img, .about img, .section img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 12px auto !important;
+    border-radius: 12px !important;
+  }
+  .flip-box-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    margin: 0 auto !important;
+  }
+  .flip-box {
+    width: 90vw !important;
+    max-width: 320px !important;
+    height: 140px !important;
+    margin: 0 auto !important;
+  }
+  .flip-box-front, .flip-box-back {
+    padding: 16px !important;
+    font-size: 1em !important;
+  }
+}
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 16px 8px !important;
+    position: static !important;
+    background: #fff !important;
+  }
+  #nav-part2 {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  .btn-top {
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+  }
+  .section {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding: 24px 8px !important;
+  }
+  .left-col, .right-col {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .ero h1 {
+    font-size: 2em !important;
+    text-align: center !important;
+    margin: 16px 0 !important;
+  }
+}
+/* Desktop navigation fix: horizontal layout, not overlay */
+@media (min-width: 901px) {
+  #nav-part2 {
+    position: static !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: none !important;
+    flex-direction: row !important;
+    height: auto !important;
+    box-shadow: none !important;
+    z-index: 1 !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+/* Force scroll to work on all browsers and override any hidden overflow */
+html, body, #main {
+  height: auto !important;
+  min-height: 100vh !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
 @font-face {
   font-family: 'HelveticaNeueMedium';
   src: url('./fonts/HelveticaNeueMedium.ttf') format('truetype');

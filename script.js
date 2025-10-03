@@ -1,12 +1,77 @@
 // header
 function toggleMenu() {
-  document.getElementById('nav-part2').classList.toggle('active');
+  const nav = document.getElementById('nav-part2');
+  const isActive = nav.classList.toggle('active');
+  // update aria-expanded if hamburger exists
+  const hb = document.querySelector('.hamburger');
+  if (hb) hb.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+  // lock body scroll when menu open on small screens
+  if (window.innerWidth <= 900) {
+    document.body.style.overflow = isActive ? 'hidden' : '';
+  }
 }
 
-// Locomotive Scroll Initialization
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('#main'),
-  smooth: true
+// Conditionally initialize Locomotive only on wider viewports
+let scroll = null;
+function initLocomotive() {
+  if (window.innerWidth > 900 && typeof LocomotiveScroll !== 'undefined') {
+    if (!scroll) {
+      scroll = new LocomotiveScroll({ el: document.querySelector('#main'), smooth: true });
+    }
+  } else {
+    if (scroll) {
+      try { scroll.destroy(); } catch (e) { /* ignore */ }
+      scroll = null;
+      // ensure body scroll is enabled
+      document.body.style.overflow = '';
+    }
+  }
+}
+
+// init on load and on resize (debounced)
+initLocomotive();
+let _resizeTimer = null;
+window.addEventListener('resize', function() {
+  clearTimeout(_resizeTimer);
+  _resizeTimer = setTimeout(initLocomotive, 250);
+});
+
+// Close nav on Escape and outside clicks (mobile)
+document.addEventListener('click', function(e) {
+  const nav = document.getElementById('nav-part2');
+  const hb = document.querySelector('.hamburger');
+  if (!nav || !hb) return;
+  if (!nav.classList.contains('active')) return;
+  if (hb.contains(e.target) || nav.contains(e.target)) return;
+  // click outside -> close
+  nav.classList.remove('active');
+  hb.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    const nav = document.getElementById('nav-part2');
+    const hb = document.querySelector('.hamburger');
+    if (nav && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      if (hb) hb.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  }
+});
+
+// make hamburger keyboard-operable
+document.addEventListener('DOMContentLoaded', function() {
+  const hb = document.querySelector('.hamburger');
+  if (hb) {
+    hb.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+  }
 });
 
 // Page 4 Hover Image Animation

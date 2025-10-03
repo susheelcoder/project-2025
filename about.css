@@ -36,6 +36,20 @@ body, html {
   font-family: 'HelveticaNeueMedium', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Force visible scrolling on this page to avoid content clipping */
+html, body {
+  overflow-y: auto !important;
+  height: auto !important;
+}
+
+#main {
+  overflow: visible !important;
+}
+
+.hero {
+  overflow: visible !important;
+}
+
 /* Main Wrapper */
 #main {
   width: 100%;
@@ -380,7 +394,8 @@ leader h1 {
 .lero {
   background: url('./IMG_2587.JPG') center/cover no-repeat;
   color: #fff;
-  padding: 700px 40px 40px;
+  min-height: 60vh; /* ensure visible area without enormous padding */
+  padding: 80px 40px;
   text-align: center;
   position: relative;
   background-size: cover;
@@ -1389,5 +1404,17 @@ footer a:hover {
   .customers img {
     width: 24px;
     height: 24px;
+  }
+}
+
+/* Ensure desktop scrolling isn't blocked by per-page rules */
+@media (min-width: 900px) {
+  html, body {
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+
+  #main {
+    overflow: visible !important;
   }
 }

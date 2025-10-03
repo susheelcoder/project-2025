@@ -155,6 +155,59 @@ nav {
   background: rgba(0, 0, 0, 0.3);
 }
 
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  width: 36px;
+  height: 28px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Mobile nav collapsed state */
+#nav-part2 {
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+#nav-part2.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+  #nav-part2 { 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+  }
+  #nav-part2.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  #nav-part2 h4 { 
+    padding: 12px 16px; 
+    border: none; 
+    background: transparent; 
+  }
+  .btn-top { display: block; margin-top: 8px; }
+}
+
 .logo {
   width: 120px;
   height: auto;
@@ -216,6 +269,15 @@ nav {
   font-weight: bold;
   border-radius: 3px;
 }
+
+/* When .btn-top is inside #nav-part2 keep it floated right on desktop */
+@media (min-width: 901px) {
+  #nav-part2 { display: flex; align-items: center; }
+  .btn-top { margin-left: 16px; order: 2; }
+}
+
+/* Hamburger focus style */
+.hamburger:focus { outline: 3px solid rgba(212,169,79,0.6); border-radius: 4px; }
 
 
 

@@ -1,0 +1,30 @@
+/* Mobile fixes: hide heavy video on small screens, provide fallback background, improve mobile nav spacing */
+
+/* Adjust the bg video on smaller screens: keep it visible but scale so it doesn't dominate the viewport */
+@media (max-width: 900px) {
+  .bg-video { display: block !important; width: 100vw; height: 40vh; object-fit: cover; }
+  .hero { height: auto; min-height: 40vh; }
+  /* If you want a fallback static hero image, set it on the .hero element: */
+  .hero.has-bg { background-image: url('../images/PreciousMoments-Home-1300x1000.jpeg'); }
+
+  /* Ensure hamburger visible */
+  .hamburger { display: flex !important; }
+
+  /* Make nav panel full-screen and easier to tap */
+  #nav-part2 {
+    width: 240px !important;
+    padding: 100px 20px !important;
+  }
+
+  #nav-part2 h4 { font-size: 18px !important; padding: 12px 0 !important; }
+
+  /* Make primary buttons easier to tap */
+  .btn-main, .btn-safari, .book-button { padding: 14px 22px !important; font-size: 16px !important; }
+}
+
+/* Improve clickable areas on very small screens */
+@media (max-width: 420px) {
+  #nav-part2 { width: 100% !important; right: -100% !important; }
+  #nav-part2.active { right: 0 !important; }
+  .hamburger span { width: 30px; height: 3px; }
+}

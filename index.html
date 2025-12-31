@@ -1,131 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>New Year Countdown 2026</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift Address</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#89f7fe,#66a6ff);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
 
-        body {
-            height: 100vh;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-        }
+.container{
+  background:#fff;
+  width:90%;
+  max-width:420px;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  text-align:center;
+}
 
-        .container {
-            padding: 30px;
-        }
+button{
+  padding:12px 20px;
+  border:none;
+  background:#4a6cf7;
+  color:#fff;
+  font-size:16px;
+  border-radius:8px;
+  cursor:pointer;
+}
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+button:hover{
+  background:#3a5ae0;
+}
 
-        .countdown {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+/* Address Section */
+#addressSection{
+  margin-top:20px;
+  padding:15px;
+  border-radius:10px;
+  background:#f5f7ff;
+  text-align:left;
+  display:none;
+  animation: slideUp 0.4s ease;
+}
 
-        .box {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 12px;
-            min-width: 100px;
-        }
+@keyframes slideUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
 
-        .box span {
-            font-size: 2.5rem;
-            font-weight: bold;
-            display: block;
-        }
+input,textarea{
+  width:100%;
+  padding:8px;
+  margin-top:8px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
 
-        .box small {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .newyear {
-            display: none;
-            animation: pop 1s ease-in-out infinite alternate;
-        }
-
-        @keyframes pop {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+h3{
+  margin:0 0 8px;
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
-    <h1 id="title">⏳ Countdown to 01/01/2026</h1>
+  <h2>🎁 Gift bhejne ke liye</h2>
+  <p>Location allow kare</p>
 
-    <div class="countdown" id="countdown">
-        <div class="box">
-            <span id="days">0</span>
-            <small>Days</small>
-        </div>
-        <div class="box">
-            <span id="hours">0</span>
-            <small>Hours</small>
-        </div>
-        <div class="box">
-            <span id="minutes">0</span>
-            <small>Minutes</small>
-        </div>
-        <div class="box">
-            <span id="seconds">0</span>
-            <small>Seconds</small>
-        </div>
-    </div>
+  <button onclick="getLocation()">📍 Allow Location</button>
 
-    <h1 class="newyear" id="newyear">🎉 Happy New Year 2026 🎉</h1>
+  <!-- Address Section -->
+  <div id="addressSection">
+    <h3>📍 Delivery Address</h3>
+    <div id="addressText">Loading...</div>
+
+    <input type="text" placeholder="House / Flat No">
+    <input type="text" placeholder="Landmark">
+    <input type="tel" placeholder="Mobile Number">
+    <textarea placeholder="Extra instructions"></textarea>
+  </div>
 </div>
 
 <script>
-    const targetDate = new Date("January 1, 2026 00:00:00").getTime();
+function getLocation(){
+  if(!navigator.geolocation){
+    alert("Geolocation supported nahi hai");
+    return;
+  }
 
-    const timer = setInterval(() => {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
+  navigator.geolocation.getCurrentPosition(showPosition,showError);
+}
 
-        if (diff <= 0) {
-            clearInterval(timer);
-            document.getElementById("countdown").style.display = "none";
-            document.getElementById("title").style.display = "none";
-            document.getElementById("newyear").style.display = "block";
-            return;
-        }
+function showPosition(position){
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
 
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
+  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("addressText").innerHTML =
+      data.display_name;
 
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours;
-        document.getElementById("minutes").innerText = minutes;
-        document.getElementById("seconds").innerText = seconds;
-    }, 1000);
+    // 👉 section open hoga
+    document.getElementById("addressSection").style.display = "block";
+  });
+}
+
+function showError(){
+  alert("❌ Location allow nahi ki gayi");
+}
 </script>
 
 </body>

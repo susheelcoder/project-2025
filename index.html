@@ -1,56 +1,43 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>C + Web Project</title>
-    <link rel="stylesheet" href="style.css">
+    <title>C on Web</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
+        .box { background: white; padding: 20px; display: inline-block; border-radius: 10px; margin-top: 50px; }
+    </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>C Programming on Web</h1>
-        <p>यह कैलकुलेशन C लैंग्वेज के अंदर हो रही है!</p>
-
-        <input type="number" id="num1" placeholder="नंबर 1">
-        <input type="number" id="num2" placeholder="नंबर 2">
-        
-        <div class="buttons">
-            <button onclick="calculateSum()">C से जोड़ें</button>
-            <button onclick="calculateSquare()">C से स्क्वायर निकालें</button>
-        </div>
-
-        <h3 id="output">रिजल्ट यहाँ दिखेगा</h3>
-    </div>
-
-    <script src="logic.c"></script>
-    <script src="app.js"></script>
-</body>
-</html>
-
-
-
-
-<div style="text-align:center;">
-    <input type="number" id="n1"> + <input type="number" id="n2">
-    <button onclick="bridge()">C Logic चलाओ</button>
-    <p id="out"></p>
+<div class="box">
+    <h2>C Language logic on HTML Page</h2>
+    <input type="number" id="num1" placeholder="Number A">
+    <input type="number" id="num2" placeholder="Number B">
+    <br><br>
+    <button onclick="callCAdd()">C से जोड़ें (+)</button>
+    <p id="res">रिजल्ट यहाँ दिखेगा</p>
 </div>
 
 <script>
-    // यह आपका "C जैसा" लॉजिक है (JavaScript के अंदर)
-    function c_logic_add(a, b) {
-        return a + b; // यहाँ आप अपना C वाला दिमाग लगा सकते हैं
-    }
+    let wasmInstance;
 
-    // यह Bridge है जो HTML और Logic को जोड़ता है
-    function bridge() {
-        let val1 = parseInt(document.getElementById('n1').value);
-        let val2 = parseInt(document.getElementById('n2').value);
+    // C के Wasm फ़ाइल को लोड करने का तरीका
+    WebAssembly.instantiateStreaming(fetch('logic.wasm'))
+        .then(result => {
+            wasmInstance = result.instance;
+            console.log("C Code Loaded!");
+        });
+
+    function callCAdd() {
+        const a = document.getElementById('num1').value;
+        const b = document.getElementById('num2').value;
         
-        // C वाले फंक्शन को कॉल किया
-        let result = c_logic_add(val1, val2);
+        // यहाँ हम C के फंक्शन 'add_in_c' को कॉल कर रहे हैं
+        const sum = wasmInstance.exports.add_in_c(a, b);
         
-        document.getElementById('out').innerText = "Result: " + result;
+        document.getElementById('res').innerText = "C Result: " + sum;
     }
 </script>
 
+</body>
+</html>

@@ -1,125 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gift Address</title>
-
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#89f7fe,#66a6ff);
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.container{
-  background:#fff;
-  width:90%;
-  max-width:420px;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.2);
-  text-align:center;
-}
-
-button{
-  padding:12px 20px;
-  border:none;
-  background:#4a6cf7;
-  color:#fff;
-  font-size:16px;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-button:hover{
-  background:#3a5ae0;
-}
-
-/* Address Section */
-#addressSection{
-  margin-top:20px;
-  padding:15px;
-  border-radius:10px;
-  background:#f5f7ff;
-  text-align:left;
-  display:none;
-  animation: slideUp 0.4s ease;
-}
-
-@keyframes slideUp{
-  from{opacity:0; transform:translateY(20px);}
-  to{opacity:1; transform:translateY(0);}
-}
-
-input,textarea{
-  width:100%;
-  padding:8px;
-  margin-top:8px;
-  border-radius:6px;
-  border:1px solid #ccc;
-  font-size:14px;
-}
-
-h3{
-  margin:0 0 8px;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>C + Web Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
-  <h2>🎁 Gift bhejne ke liye</h2>
-  <p>Location allow kare</p>
+    <div class="container">
+        <h1>C Programming on Web</h1>
+        <p>यह कैलकुलेशन C लैंग्वेज के अंदर हो रही है!</p>
 
-  <button onclick="getLocation()">📍 Allow Location</button>
+        <input type="number" id="num1" placeholder="नंबर 1">
+        <input type="number" id="num2" placeholder="नंबर 2">
+        
+        <div class="buttons">
+            <button onclick="calculateSum()">C से जोड़ें</button>
+            <button onclick="calculateSquare()">C से स्क्वायर निकालें</button>
+        </div>
 
-  <!-- Address Section -->
-  <div id="addressSection">
-    <h3>📍 Delivery Address</h3>
-    <div id="addressText">Loading...</div>
+        <h3 id="output">रिजल्ट यहाँ दिखेगा</h3>
+    </div>
 
-    <input type="text" placeholder="House / Flat No">
-    <input type="text" placeholder="Landmark">
-    <input type="tel" placeholder="Mobile Number">
-    <textarea placeholder="Extra instructions"></textarea>
-  </div>
-</div>
-
-<script>
-function getLocation(){
-  if(!navigator.geolocation){
-    alert("Geolocation supported nahi hai");
-    return;
-  }
-
-  navigator.geolocation.getCurrentPosition(showPosition,showError);
-}
-
-function showPosition(position){
-  const lat = position.coords.latitude;
-  const lon = position.coords.longitude;
-
-  fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("addressText").innerHTML =
-      data.display_name;
-
-    // 👉 section open hoga
-    document.getElementById("addressSection").style.display = "block";
-  });
-}
-
-function showError(){
-  alert("❌ Location allow nahi ki gayi");
-}
-</script>
-
+    <script src="logic.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

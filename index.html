@@ -10,19 +10,11 @@
     --blue:#2563eb;
     --green:#0d9488;
     --gray:#64748b;
-    --bg:#f8fafc;
-    --card:#ffffff;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
     font-family:"Segoe UI", system-ui, sans-serif;
@@ -31,7 +23,7 @@ body{
     scroll-snap-type:y mandatory;
 }
 
-/* Common Section */
+/* Section */
 section{
     min-height:100vh;
     display:flex;
@@ -41,7 +33,7 @@ section{
     scroll-snap-align:start;
 }
 
-/* Inner layout */
+/* Layout */
 .section-inner{
     max-width:1100px;
     width:100%;
@@ -51,40 +43,29 @@ section{
 }
 
 /* Text */
-.section-text{
-    flex:1;
-}
-
+.section-text{flex:1;}
 .section-text h2{
     font-size:2.4rem;
     margin-bottom:15px;
 }
-
 .section-text p,
 .section-text li{
     font-size:1.1rem;
     color:#475569;
     line-height:1.7;
 }
-
-.section-text ul{
-    margin-left:18px;
-}
+.section-text ul{margin-left:18px;}
 
 /* Image */
-.section-img{
-    flex:1;
-    text-align:center;
-}
-
+.section-img{flex:1;text-align:center;}
 .section-img img{
     width:100%;
     max-width:420px;
-    border-radius:20px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    border-radius:22px;
+    box-shadow:0 25px 45px rgba(0,0,0,0.2);
 }
 
-/* Tags */
+/* Tag */
 .tag{
     display:inline-block;
     padding:6px 14px;
@@ -94,37 +75,20 @@ section{
     margin-bottom:12px;
 }
 
-/* Section Colors */
-.current-work{
-    background:#ffffff;
-}
-.current-work .tag{
-    background:#dbeafe;
-    color:var(--blue);
-}
+/* Colors */
+.current-work{background:#ffffff;}
+.current-work .tag{background:#dbeafe;color:var(--blue);}
 
-.new-ideas{
-    background:#f0fdfa;
-}
-.new-ideas .tag{
-    background:#ccfbf1;
-    color:var(--green);
-}
+.new-ideas{background:#f0fdfa;}
+.new-ideas .tag{background:#ccfbf1;color:var(--green);}
 
-.old-work{
-    background:#f1f5f9;
-}
-.old-work .tag{
-    background:#e2e8f0;
-    color:var(--gray);
-}
+.old-work{background:#f1f5f9;}
+.old-work .tag{background:#e2e8f0;color:var(--gray);}
 
-/* Reverse layout */
-.reverse .section-inner{
-    flex-direction:row-reverse;
-}
+/* Reverse */
+.reverse .section-inner{flex-direction:row-reverse;}
 
-/* Footer Button */
+/* Button */
 .back-btn{
     margin-top:25px;
     display:inline-block;
@@ -134,18 +98,12 @@ section{
     border-radius:999px;
     text-decoration:none;
     font-weight:600;
-    box-shadow:0 10px 25px rgba(37,99,235,0.4);
 }
 
 /* Mobile */
 @media(max-width:768px){
-    .section-inner{
-        flex-direction:column;
-        text-align:center;
-    }
-    .section-text h2{
-        font-size:1.9rem;
-    }
+    .section-inner{flex-direction:column;text-align:center;}
+    .section-text h2{font-size:1.9rem;}
 }
 </style>
 </head>
@@ -154,65 +112,68 @@ section{
 
 <!-- SECTION 1 -->
 <section class="current-work">
-    <div class="section-inner">
+<div class="section-inner">
 
-        <div class="section-text">
-            <span class="tag">🚀 Working Now</span>
-            <h2>Website Development</h2>
-            <p>
-                Abhi <strong>Home Page</strong> ka layout aur structure design ho raha hai.
-                Isme modern UI, animations aur responsive design add kiya ja raha hai.
-            </p>
-        </div>
+<div class="section-text">
+<span class="tag">🚀 Working Now</span>
+<h2>Website Development</h2>
+<p>
+Abhi home page ka modern layout ban raha hai jisme
+clean UI, animations aur responsive design include hai.
+</p>
+</div>
 
-        <div class="section-img">
-            <img src="IMG/work.png" alt="Working">
-        </div>
+<div class="section-img">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+     alt="Coding Work">
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- SECTION 2 -->
 <section class="new-ideas reverse">
-    <div class="section-inner">
+<div class="section-inner">
 
-        <div class="section-text">
-            <span class="tag">💡 Upcoming Ideas</span>
-            <h2>Future Enhancements</h2>
-            <ul>
-                <li>Dark / Light Mode Toggle</li>
-                <li>Advanced animations</li>
-                <li>Contact form with validation</li>
-                <li>Performance optimization</li>
-            </ul>
-        </div>
+<div class="section-text">
+<span class="tag">💡 Upcoming Ideas</span>
+<h2>Future Enhancements</h2>
+<ul>
+<li>Dark / Light Mode</li>
+<li>Advanced Animations</li>
+<li>Contact Form</li>
+<li>Performance Boost</li>
+</ul>
+</div>
 
-        <div class="section-img">
-            <img src="IMG/ideas.png" alt="Ideas">
-        </div>
+<div class="section-img">
+<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
+     alt="Ideas">
+</div>
 
-    </div>
+</div>
 </section>
 
 <!-- SECTION 3 -->
 <section class="old-work">
-    <div class="section-inner">
+<div class="section-inner">
 
-        <div class="section-text">
-            <span class="tag">📂 Archive</span>
-            <h2>Completed Work</h2>
-            <p>✅ Index page basic structure complete</p>
-            <p>✅ Logo design & font finalized</p>
-            <p>✅ Initial responsive testing done</p>
+<div class="section-text">
+<span class="tag">📂 Archive</span>
+<h2>Completed Work</h2>
+<p>✅ Index page structure ready</p>
+<p>✅ Logo & font finalized</p>
+<p>✅ Responsive testing done</p>
 
-            <a href="index.html" class="back-btn">← Back to Index</a>
-        </div>
+<a href="#" class="back-btn">← Back to Index</a>
+</div>
 
-        <div class="section-img">
-            <img src="IMG/archive.png" alt="Archive">
-        </div>
+<div class="section-img">
+<img src="https://images.unsplash.com/photo-1506765515384-028b60a970df"
+     alt="Archive">
+</div>
 
-    </div>
+</div>
 </section>
 
 </body>

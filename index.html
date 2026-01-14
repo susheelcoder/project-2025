@@ -26,3 +26,31 @@
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+<div style="text-align:center;">
+    <input type="number" id="n1"> + <input type="number" id="n2">
+    <button onclick="bridge()">C Logic चलाओ</button>
+    <p id="out"></p>
+</div>
+
+<script>
+    // यह आपका "C जैसा" लॉजिक है (JavaScript के अंदर)
+    function c_logic_add(a, b) {
+        return a + b; // यहाँ आप अपना C वाला दिमाग लगा सकते हैं
+    }
+
+    // यह Bridge है जो HTML और Logic को जोड़ता है
+    function bridge() {
+        let val1 = parseInt(document.getElementById('n1').value);
+        let val2 = parseInt(document.getElementById('n2').value);
+        
+        // C वाले फंक्शन को कॉल किया
+        let result = c_logic_add(val1, val2);
+        
+        document.getElementById('out').innerText = "Result: " + result;
+    }
+</script>
+

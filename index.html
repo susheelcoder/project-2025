@@ -1,55 +1,176 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - My Work Hub</title>
-    <style>
-        /* Basic Styling */
-        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f0f2f5; }
-        .container { max-width: 800px; margin: auto; }
-        
-        /* Heading Style */
-        h1 { text-align: center; color: #333; }
-        h2 { border-bottom: 2px solid #ddd; padding-bottom: 5px; margin-top: 30px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - My Work Hub</title>
 
-        /* Sections Color Coding */
-        .current-work { background: #e7f3ff; border-left: 5px solid #007bff; padding: 15px; border-radius: 5px; }
-        .new-ideas { background: #e6fffa; border-left: 5px solid #38b2ac; padding: 15px; border-radius: 5px; margin-top: 15px; }
-        .old-work { background: #f7f7f7; border-left: 5px solid #a0aec0; padding: 15px; border-radius: 5px; margin-top: 15px; color: #718096; }
+<style>
+:root{
+    --blue:#2563eb;
+    --green:#0d9488;
+    --gray:#64748b;
+    --bg:#f8fafc;
+    --card:#ffffff;
+}
 
-        .tag { font-size: 12px; font-weight: bold; text-transform: uppercase; display: inline-block; margin-bottom: 5px; }
-    </style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(135deg,#eef2ff,#f8fafc);
+    color:#1e293b;
+}
+
+/* Container */
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* Header */
+h1{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:40px;
+}
+
+/* Card Common */
+section{
+    background:var(--card);
+    padding:22px;
+    border-radius:14px;
+    margin-bottom:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    transition:0.3s;
+}
+
+section:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Tags */
+.tag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    padding:6px 12px;
+    border-radius:999px;
+    margin-bottom:10px;
+}
+
+/* Sections */
+.current-work{
+    border-left:6px solid var(--blue);
+}
+.current-work .tag{
+    background:#dbeafe;
+    color:var(--blue);
+}
+
+.new-ideas{
+    border-left:6px solid var(--green);
+}
+.new-ideas .tag{
+    background:#ccfbf1;
+    color:var(--green);
+}
+
+.old-work{
+    border-left:6px solid var(--gray);
+    opacity:0.9;
+}
+.old-work .tag{
+    background:#e2e8f0;
+    color:var(--gray);
+}
+
+/* List */
+ul{
+    padding-left:18px;
+}
+li{
+    margin-bottom:8px;
+}
+
+/* Footer Link */
+.back{
+    text-align:center;
+    margin-top:35px;
+}
+
+.back a{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    padding:12px 22px;
+    border-radius:999px;
+    font-weight:600;
+    box-shadow:0 8px 18px rgba(37,99,235,0.35);
+    transition:0.3s;
+}
+
+.back a:hover{
+    transform:scale(1.05);
+    box-shadow:0 12px 25px rgba(37,99,235,0.45);
+}
+
+/* Mobile */
+@media(max-width:600px){
+    h1{font-size:1.8rem;}
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
+
     <h1>Susheelcoder's Work Hub</h1>
+    <p class="subtitle">📌 Current progress, ideas & completed work at one place</p>
 
     <section class="current-work">
-        <span class="tag" style="color: #007bff;">🚀 Working Now</span>
-        <h3>Website Development - Home Page</h3>
-        <p>Abhi home.html ka layout aur roadmap taiyar ho raha hai. Isme styling add karni hai.</p>
+        <span class="tag">🚀 Working Now</span>
+        <h3>Website Development – Home Page</h3>
+        <p>
+            Abhi <strong>home.html</strong> ka layout aur roadmap ready ho raha hai.  
+            Next step me advanced styling, animation aur responsive layout add hoga.
+        </p>
     </section>
 
     <section class="new-ideas">
-        <span class="tag" style="color: #38b2ac;">💡 Upcoming Ideas</span>
+        <span class="tag">💡 Upcoming Ideas</span>
         <ul>
-            <li>Dashboard me dark mode add karna.</li>
-            <li>Mobile responsive design improve karna.</li>
-            <li>Ek naya "Contact Me" form banana.</li>
+            <li>Dashboard me Dark / Light mode toggle</li>
+            <li>Fully mobile-first responsive design</li>
+            <li>Modern Contact Me form with validation</li>
         </ul>
     </section>
 
     <section class="old-work">
-        <span class="tag" style="color: #a0aec0;">📂 Archive (Purana Kaam)</span>
-        <p>Index page ka basic structure complete kiya. (30 Aug 2025)</p>
-        <p>Logo design aur font selection final kiya.</p>
+        <span class="tag">📂 Archive</span>
+        <p>✅ Index page ka basic structure complete (30 Aug 2025)</p>
+        <p>✅ Logo design aur font selection final</p>
     </section>
 
-    <div style="margin-top: 30px; text-align: center;">
+    <div class="back">
         <a href="index.html">← Back to Index Page</a>
     </div>
+
 </div>
 
 </body>

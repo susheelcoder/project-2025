@@ -1,0 +1,30 @@
+<div id="preloader">
+  <div class="logo">
+    <div class="shadow"></div>
+    <div class="bookmark">
+      <svg viewBox="0 0 100 100">
+        <path class="line" d="M10 0 L10 70 A10 10 0 0 0 30 70 L30 20 A10 10 0 0 1 50 20 L50 70 A16 9 0 0 0 70 80 A13 20 0 0 1 80 94 L100 97"/>
+      </svg>
+    </div>
+  </div>
+  <div class="bar"><span>Haproven</span></div>
+</div>
+
+<style>
+#preloader{position:fixed;inset:0;background:#f8f9fa;display:flex;align-items:center;justify-content:center;z-index:9999;transition:.6s}
+.logo{display:flex;align-items:center}
+.shadow{position:absolute;width:90px;height:120px;background:#bc1be7;transform:translate(-12px,-8px);clip-path:polygon(0 0,100% 0,100% 100%,50% 88%,0 100%)}
+.bookmark{width:95px;height:125px;background:#bc1be7;clip-path:polygon(0 0,100% 0,100% 100%,50% 88%,0 100%);display:flex;align-items:center;justify-content:center}
+svg{width:90px;height:90px}
+.line{fill:none;stroke:#fff;stroke-width:6;stroke-dasharray:300;stroke-dashoffset:300;animation:draw 1s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.bar{height:85px;width:0;background:#fff;border:6px solid #bc1be7;border-left:0;border-radius:0 20px 20px 0;margin-left:10px;display:flex;align-items:center;overflow:hidden;animation:bar 1s forwards 1.2s}
+@keyframes bar{to{width:300px}}
+.bar span{font-size:56px;font-weight:900;opacity:0;animation:txt .4s forwards 2s}
+@keyframes txt{to{opacity:1}}
+.loaded #preloader{opacity:0;visibility:hidden}
+</style>
+
+<script>
+window.addEventListener("load",()=>setTimeout(()=>document.body.classList.add("loaded"),2600000));
+</script>

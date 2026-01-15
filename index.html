@@ -1,180 +1,201 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Susheelcoder | Work Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haproven Preloader</title>
+    <style>
+        :root {
+            --purple-dark: #bc1be7;
+            --purple-light: #bc1be7;
+        }
 
-<style>
-:root{
-    --blue:#2563eb;
-    --green:#0d9488;
-    --gray:#64748b;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box;}
+        /* --- PRELOADER SCREEN --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
 
-html{scroll-behavior:smooth;}
+        /* Logo Scale for Mobile */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            transform: scale(0.8);
+        }
 
-body{
-    font-family:"Segoe UI", system-ui, sans-serif;
-    background:linear-gradient(135deg,#eef2ff,#f8fafc);
-    color:#1e293b;
-    scroll-snap-type:y mandatory;
-}
+        @media (min-width: 768px) {
+            .logo-container {
+                transform: scale(1.1);
+            }
+        }
 
-/* Section */
-section{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px 25px;
-    scroll-snap-align:start;
-}
+        /* --- LOGO DESIGN --- */
+        .bookmark-wrapper {
+            position: relative;
+            z-index: 10;
+        }
 
-/* Layout */
-.section-inner{
-    max-width:1100px;
-    width:100%;
-    display:flex;
-    gap:50px;
-    align-items:center;
-}
+        .shadow-layer {
+            position: absolute;
+            width: 90px;
+            height: 120px;
+            background-color: var(--purple-light);
+            top: -8px;
+            left: -12px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%);
+            z-index: 1;
+            border-radius: 10px 10px 0px 0px;
+        }
 
-/* Text */
-.section-text{flex:1;}
-.section-text h2{
-    font-size:2.4rem;
-    margin-bottom:15px;
-}
-.section-text p,
-.section-text li{
-    font-size:1.1rem;
-    color:#475569;
-    line-height:1.7;
-}
-.section-text ul{margin-left:18px;}
+        .main-bookmark {
+            position: relative;
+            width: 95px;
+            height: 125px;
+            background-color: var(--purple-dark);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            border-radius: 10px 10px 0px 0px;
+        }
 
-/* Image */
-.section-img{flex:1;text-align:center;}
-.section-img img{
-    width:100%;
-    max-width:420px;
-    border-radius:22px;
-    box-shadow:0 25px 45px rgba(0,0,0,0.2);
-}
+        /* Automatic Map Path Animation */
+        .map-svg {
+            width: 60px;
+            height: 85px;
+        }
 
-/* Tag */
-.tag{
-    display:inline-block;
-    padding:6px 14px;
-    border-radius:999px;
-    font-size:12px;
-    font-weight:700;
-    margin-bottom:12px;
-}
+        .path-line {
+            fill: none;
+            stroke: white;
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 200;
+            animation: drawPath 1.5s ease forwards 0.5s;
+        }
 
-/* Colors */
-.current-work{background:#ffffff;}
-.current-work .tag{background:#dbeafe;color:var(--blue);}
+        @keyframes drawPath {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
 
-.new-ideas{background:#f0fdfa;}
-.new-ideas .tag{background:#ccfbf1;color:var(--green);}
+        /* Automatic Bar Expansion */
+        .brand-bar {
+            height: 85px;
+            width: 0;
+            background: white;
+            border: 6px solid var(--purple-dark);
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            z-index: 5;
+            animation: expandBar 1s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.2s;
+        }
 
-.old-work{background:#f1f5f9;}
-.old-work .tag{background:#e2e8f0;color:var(--gray);}
+        @keyframes expandBar {
+            to {
+                width: 310px;
+            }
+        }
 
-/* Reverse */
-.reverse .section-inner{flex-direction:row-reverse;}
+        .brand-text {
+            font-size: 42px;
+            font-weight: 900;
+            color: #000;
+            padding-left: 45px;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeInText 0.5s ease forwards 1.8s;
+        }
 
-/* Button */
-.back-btn{
-    margin-top:25px;
-    display:inline-block;
-    background:linear-gradient(135deg,#2563eb,#1d4ed8);
-    color:#fff;
-    padding:12px 26px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:600;
-}
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
 
-/* Mobile */
-@media(max-width:768px){
-    .section-inner{flex-direction:column;text-align:center;}
-    .section-text h2{font-size:1.9rem;}
-}
-</style>
+        /* --- CONTENT SECTION --- */
+        #main-content {
+            padding: 50px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        /* Preloader hatne ke baad content dikhao */
+        .loaded #preloader {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loaded #main-content {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- SECTION 1 -->
-<section class="current-work">
-<div class="section-inner">
+    <div id="preloader">
+        <div class="logo-container">
+            <!-- <div class="bookmark-wrapper"> -->
+            <div class="shadow-layer"></div>
+            <div class="main-bookmark">
+                <svg class="map-svg" viewBox="0 0 100 100">
+                    <path class="path-line"
+                        d="M10,0  L10,70 A1 1,0,0 0 ,30 70      L30,70 L30,20 A1 1,0,0 1,50 20         L50,20 L50,80  A1 0.9,0,0 1 ,50 80    L62,80  L63,90              "
+                        stroke="blue" fill="none"></path>
 
-<div class="section-text">
-<span class="tag">🚀 Working Now</span>
-<h2>Website Development</h2>
-<p>
-Abhi home page ka modern layout ban raha hai jisme
-clean UI, animations aur responsive design include hai.
-</p>
-</div>
+                    <circle cx="10" cy="0" r="5" fill="white" />
+                    <circle cx="90" cy="90" r="5" fill="white" />
 
-<div class="section-img">
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-     alt="Coding Work">
-</div>
+                    <!-- <circle cx="45" cy="16" r="3" fill="#5e1a84" /> -->
+                </svg>
+            </div>
+        </div>
+        <div class="brand-bar">
+            <span class="brand-text">Haproven</span>
+        </div>
+    </div>
+    </div>
 
-</div>
-</section>
+    <div id="main-content">
+        <h1>Swagat hai Haproven par!</h1>
+        <p>Aapki website ab puri tarah se load ho chuki hai.</p>
+    </div>
 
-<!-- SECTION 2 -->
-<section class="new-ideas reverse">
-<div class="section-inner">
-
-<div class="section-text">
-<span class="tag">💡 Upcoming Ideas</span>
-<h2>Future Enhancements</h2>
-<ul>
-<li>Dark / Light Mode</li>
-<li>Advanced Animations</li>
-<li>Contact Form</li>
-<li>Performance Boost</li>
-</ul>
-</div>
-
-<div class="section-img">
-<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0"
-     alt="Ideas">
-</div>
-
-</div>
-</section>
-
-<!-- SECTION 3 -->
-<section class="old-work">
-<div class="section-inner">
-
-<div class="section-text">
-<span class="tag">📂 Archive</span>
-<h2>Completed Work</h2>
-<p>✅ Index page structure ready</p>
-<p>✅ Logo & font finalized</p>
-<p>✅ Responsive testing done</p>
-
-<a href="#" class="back-btn">← Back to Index</a>
-</div>
-
-<div class="section-img">
-<img src="https://images.unsplash.com/photo-1506765515384-028b60a970df"
-     alt="Archive">
-</div>
-
-</div>
-</section>
+    <script>
+        // Website load hone ke 3.5 second baad preloader ko hatane ke liye
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 350000000); // 3.5 seconds ka delay
+        });
+    </script>
 
 </body>
+
 </html>

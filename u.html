@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<meta charset="UTF-8">
+<title>SVG Path</title>
 <style>
-  body{font-family: Arial, Helvetica, sans-serif; }
-  h1{text-align: center;}
-  .container{
-    background-color: #eee;
-    border: 2px solid gray;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
-  }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align:center;
+}
+.container{
+    background:#eee;
+    border:2px solid gray;
+    width:500px;
+    height:500px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
- 
+svg{
+    width:100%;
+    height:100%;
+}
 
+path{
+    stroke:#0066ff;
+    stroke-width:2;
+    fill:none;
+}
 </style>
+</head>
 
 <body>
-  <h1>SVG Path element</h1>
+<h1>SVG Path element</h1>
 
-  <div class="container">
-    <svg viewBox="0 0 100 100" >
-      <g class="grid">
-      </g>
+<div class="container">
+<svg viewBox="0 0 100 100">
 
+    <!-- Vertical line -->
+    <path d="M10 0 L10 70"/>
 
-      <path d="M10,0 L10,70 " stroke="blue" fill="none" ></path>
-      <path d="M10,70  A1 1,0,0 0 ,30 70" stroke="blue" fill="none"  ></path>
-      <path d="M30,70 L30,20 " stroke="blue" fill="none" ></path>
-      <path d="M30,20 A1 1,0,0 1 ,50 20" stroke="blue" fill="none"  ></path>
-      <path d="M50,20 L50,70 " stroke="blue" fill="none" ></path>
+    <!-- Curve -->
+    <path d="M10 70 A10 10 0 0 0 30 70"/>
 
-      <path d="M51,79  A1 4.7,0,0 1 ,50 69" stroke="blue" fill="none"  ></path>
+    <!-- Up -->
+    <path d="M30 70 L30 20"/>
 
-      <path d="M71,80  L51,80  " stroke="blue" fill="none" ></path>
+    <!-- Curve -->
+    <path d="M30 20 A10 10 0 0 1 50 20"/>
 
-      <path d="M71,80  A1 4.7,0,0 1 ,70 89" stroke="blue" fill="none"  ></path>
+    <!-- Down -->
+    <path d="M50 20 L50 70"/>
 
-      <path d="M95,90  L70,90  " stroke="blue" fill="none" ></path>
+    <!-- Curve -->
+    <path d="M50 70 A10 10 0 0 0 70 80"/>
 
-    
-  
-    </svg>
+    <!-- Horizontal -->
+    <path d="M80 80 L70 80"/>
 
-  </div>
+    <!-- Curve down -->
+    <path d="M86 90 A10 10 0 0 0 75 80"/>
+
+    <!-- Horizontal -->
+    <path d="M85 90 L100 90"/>
+
+</svg>
+</div>
 
 </body>
-
 </html>

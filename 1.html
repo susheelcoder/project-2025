@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haproven Preloader</title>
+    <style>
+        :root {
+            --purple-dark: #bc1be7;
+            --purple-light: #bc1be7;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        /* --- PRELOADER SCREEN --- */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        /* Logo Scale for Mobile */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            transform: scale(0.8);
+        }
+
+        @media (min-width: 768px) {
+            .logo-container {
+                transform: scale(1.1);
+            }
+        }
+
+        /* --- LOGO DESIGN --- */
+        .bookmark-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+
+        .shadow-layer {
+            position: absolute;
+            width: 90px;
+            height: 120px;
+            background-color: var(--purple-light);
+            top: -8px;
+            left: -12px;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%);
+            z-index: 1;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .main-bookmark {
+            position: relative;
+            width: 95px;
+            height: 125px;
+            background-color: var(--purple-dark);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 88%, 0% 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        /* Automatic Map Path Animation */
+        .map-svg {
+            width: 60px;
+            height: 85px;
+        }
+
+        .path-line {
+            fill: none;
+            stroke: white;
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 200;
+            animation: drawPath 1.5s ease forwards 0.5s;
+        }
+
+        @keyframes drawPath {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Automatic Bar Expansion */
+        .brand-bar {
+            height: 85px;
+            width: 0;
+            background: white;
+            border: 6px solid var(--purple-dark);
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            z-index: 5;
+            animation: expandBar 1s cubic-bezier(0.77, 0, 0.175, 1) forwards 1.2s;
+        }
+
+        @keyframes expandBar {
+            to {
+                width: 310px;
+            }
+        }
+
+        .brand-text {
+            font-size: 42px;
+            font-weight: 900;
+            color: #000;
+            padding-left: 45px;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeInText 0.5s ease forwards 1.8s;
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* --- CONTENT SECTION --- */
+        #main-content {
+            padding: 50px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        /* Preloader hatne ke baad content dikhao */
+        .loaded #preloader {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loaded #main-content {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="logo-container">
+            <!-- <div class="bookmark-wrapper"> -->
+            <div class="shadow-layer"></div>
+            <div class="main-bookmark">
+                <svg class="map-svg" viewBox="0 0 100 100">
+                    <path class="path-line"
+                        d="M10,0  L10,70 A1 1,0,0 0 ,30 70      L30,70 L30,20 A1 1,0,0 1,50 20         L50,20 L50,80  A1 0.9,0,0 1 ,50 80    L62,80  L63,90              "
+                        stroke="blue" fill="none"></path>
+
+                    <circle cx="10" cy="0" r="5" fill="white" />
+                    <circle cx="90" cy="90" r="5" fill="white" />
+
+                    <!-- <circle cx="45" cy="16" r="3" fill="#5e1a84" /> -->
+                </svg>
+            </div>
+        </div>
+        <div class="brand-bar">
+            <span class="brand-text">Haproven</span>
+        </div>
+    </div>
+    </div>
+
+    <div id="main-content">
+        <h1>Swagat hai Haproven par!</h1>
+        <p>Aapki website ab puri tarah se load ho chuki hai.</p>
+    </div>
+
+    <script>
+        // Website load hone ke 3.5 second baad preloader ko hatane ke liye
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.body.classList.add('loaded');
+            }, 350000000); // 3.5 seconds ka delay
+        });
+    </script>
+
+</body>
+
+</html>

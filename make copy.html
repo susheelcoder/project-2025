@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haproven Preloader</title>
+
+    <style>
+        :root {
+            --purple-dark: #bc1be7;
+            --purple-light: #bc1be7;
+        }
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* ===== PRELOADER ===== */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .5s ease, visibility .5s;
+        }
+
+        .show-loader #preloader {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            transform: scale(.8);
+        }
+
+        @media (min-width:768px) {
+            .logo-container {
+                transform: scale(1.1);
+            }
+        }
+
+        .shadow-layer {
+            position: absolute;
+            width: 90px;
+            height: 120px;
+            background: var(--purple-light);
+            top: -8px;
+            left: -12px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
+            border-radius: 10px 10px 0 0;
+        }
+
+        .main-bookmark {
+            width: 95px;
+            height: 125px;
+            background: var(--purple-dark);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 100%);
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .map-svg {
+            width: 100px;
+            height: 100px;
+        }
+
+        .path-line {
+            fill: none;
+            stroke: white;
+            stroke-width: 6;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 300;
+            stroke-dashoffset: 200;
+            animation: drawPath .9s ease forwards .1s;
+        }
+
+        @keyframes drawPath {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .brand-bar {
+            height: 85px;
+            width: 0;
+            background: #fff;
+            border: 6px solid var(--purple-dark);
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            animation: expandBar 1s cubic-bezier(.77, 0, .175, 1) forwards 1.2s;
+        }
+
+        @keyframes expandBar {
+            to {
+                width: 310px;
+            }
+        }
+
+        .brand-text {
+            font-size: 57px;
+            font-weight: 900;
+            opacity: 0;
+            animation: fadeInText .5s ease forwards 1.8s;
+        }
+
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* ===== PAGE CONTENT ===== */
+        .page {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        button {
+            padding: 14px 30px;
+            font-size: 18px;
+            background: var(--purple-dark);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== PAGE ===== -->
+    <div class="page">
+        <h1>Swagat hai Haproven par</h1>
+        <button class="loader-btn" data-link="make.html">Open Maker</button>
+        <button class="loader-btn" data-link="/">Go Home</button>
+        <button class="loader-btn" data-link="profile.html">Profile</button>
+
+    </div>
+
+    <!-- ===== PRELOADER ===== -->
+    <div id="preloader">
+        <div class="logo-container">
+            <div class="shadow-layer"></div>
+            <div class="main-bookmark">
+                <svg class="map-svg" viewBox="0 0 100 100">
+                    <path class="path-line" d="
+          M10 0 L10 70
+          A10 10 0 0 0 30 70
+          L30 20
+          A10 10 0 0 1 50 20
+          L50 70
+          A16 9 0 0 0 70 80
+          A13 20 0 0 1 80 94
+          L100 95
+        " />
+                </svg>
+            </div>
+        </div>
+
+        <div class="brand-bar">
+            <span class="brand-text">Haproven</span>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.loader-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+
+                // Preloader show
+                document.body.classList.add('show-loader');
+
+                const link = btn.dataset.link;
+
+                // Same animation timing
+                setTimeout(() => {
+                    if (link) window.location.href = link;
+                }, 2600);
+
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

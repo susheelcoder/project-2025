@@ -41,8 +41,8 @@
  }
 
  .hamburger span {
-     width: 25px;
-     height: 3px;
+     width: 56px;
+     height: 13px;
      background: #fff;
      border-radius: 5px;
  }
@@ -56,7 +56,7 @@
 
  #navbar li {
      cursor: pointer;
-     font-size: 15px;
+     font-size: 26px;
  }
 
  @media (min-width: 1000px) {
@@ -85,7 +85,7 @@
 
      #navbar {
          position: absolute;
-         top: 60px;
+         top: 130px;
          right: 0;
          width: 220px;
          background: #111;
@@ -360,9 +360,9 @@
      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
  }
 
- .hero-box svg{
-    width: 600px;
-    height: 500px;
+ .hero-box svg {
+     width: 600px;
+     height: 400px;
 
  }
 
@@ -526,6 +526,17 @@
          max-width: 100%;
      }
 
+      /* text */
+ .staky-card .name {
+     font-weight: 600;
+     margin-bottom: 4px;
+     font-size: 30px;
+ }
+ .staky-card .desc {
+    font-size: 18px;
+    color: #555;
+}
+
 
 
  }
@@ -545,7 +556,7 @@
      /* Header visible, sidebar hidden */
      header {
          display: flex;
-         padding: 20px 26px;
+         padding: 40px 26px;
      }
 
      .sidebar {
@@ -564,7 +575,7 @@
 
      #navbar {
          position: absolute;
-         top: 60px;
+         top: 130px;
          right: 0;
          width: 220px;
          background: #111;
@@ -613,7 +624,6 @@
 
      /* Sticky cards */
      .card-wrapper {
-         flex-direction: column;
          height: auto;
          gap: 15px;
          padding: 20px 0;

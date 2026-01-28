@@ -11,6 +11,104 @@
      background: #f4f4f4;
  }
 
+
+ /* =========header=========== */
+ header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 12px 20px;
+     background: #111;
+     color: #fff;
+     position: sticky;
+     top: 0;
+     z-index: 999;
+     position: fixed;
+     width: 100%;
+ }
+
+ .logo {
+     font-size: 22px;
+     font-weight: 700;
+ }
+
+ /* hamburger */
+ .hamburger {
+     display: none;
+     flex-direction: column;
+     gap: 5px;
+     cursor: pointer;
+ }
+
+ .hamburger span {
+     width: 25px;
+     height: 3px;
+     background: #fff;
+     border-radius: 5px;
+ }
+
+ /* nav */
+ #navbar ul {
+     display: flex;
+     gap: 25px;
+     list-style: none;
+ }
+
+ #navbar li {
+     cursor: pointer;
+     font-size: 15px;
+ }
+
+ @media (min-width: 1000px) {
+     header {
+         display: none;
+     }
+ }
+
+ @media (max-width: 1000px) {
+     .sidebar {
+         display: none;
+     }
+
+     .main-content {
+         margin: 0%;
+     }
+ }
+
+ /* ================= MOBILE ================= */
+ @media (max-width: 1000px) {
+
+     .hamburger {
+         display: flex;
+     }
+
+
+     #navbar {
+         position: absolute;
+         top: 60px;
+         right: 0;
+         width: 220px;
+         background: #111;
+         transform: translateX(100%);
+         transition: 0.3s ease;
+     }
+
+     #navbar.active {
+         transform: translateX(0);
+     }
+
+     #navbar ul {
+         flex-direction: column;
+         gap: 0;
+     }
+
+     #navbar li {
+         padding: 14px 20px;
+         border-bottom: 1px solid #222;
+     }
+ }
+
+
  /* Sidebar */
  .sidebar {
      width: 260px;
@@ -256,10 +354,16 @@
 
  .hero-box {
      width: 100%;
-     height: 320px;
+     /* height: 320px; */
      background: rgb(201, 191, 191);
      border-radius: 14px;
      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+ }
+
+ .hero-box svg{
+    width: 600px;
+    height: 500px;
+
  }
 
  @media (max-width: 768px) {
@@ -417,18 +521,120 @@
          opacity: 0.85;
          margin-bottom: 30px;
      }
+
      .hero-left {
-        width: 100%;
+         max-width: 100%;
      }
 
 
+
+ }
+
+
+ /* ================= MOBILE ONLY ================= */
+ @media (max-width: 1000px) {
+
+     .icon {
+         display: none;
+     }
+
+     body {
+         flex-direction: column;
+     }
+
+     /* Header visible, sidebar hidden */
+     header {
+         display: flex;
+         padding: 20px 26px;
+     }
+
+     .sidebar {
+         display: none;
+     }
+
+     .main-content {
+         margin-left: 0;
+         padding: 20px;
+     }
+
+     /* Navbar mobile */
+     .hamburger {
+         display: flex;
+     }
+
+     #navbar {
+         position: absolute;
+         top: 60px;
+         right: 0;
+         width: 220px;
+         background: #111;
+         transform: translateX(100%);
+         transition: 0.3s ease;
+     }
+
+     #navbar.active {
+         transform: translateX(0);
+     }
+
+     #navbar ul {
+         flex-direction: column;
+     }
+
+     #navbar li {
+         padding: 14px 20px;
+         border-bottom: 1px solid #222;
+     }
+
+     /* Hero section */
+     .hero-se h1 {
+         display: none;
+     }
+
+     .hero {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 40px 20px;
+         margin-top: 100px;
+     }
+
+     .hero-left {
+         max-width: 100%;
+     }
+
+
+     .hero-right {
+         width: 100%;
+         margin-top: 30px;
+     }
+
+     .hero-box {
+         width: auto;
+     }
+
+     /* Sticky cards */
      .card-wrapper {
-         display: none;
-
+         flex-direction: column;
+         height: auto;
+         gap: 15px;
+         padding: 20px 0;
      }
 
+     .staky-card {
+         width: 100%;
+         transform: translateY(0);
+     }
+
+     /* Projects */
      .projects-section {
-         display: none;
+         padding: 50px 20px;
+     }
+
+     .projects-container {
+         gap: 20px;
+     }
+
+     .project-card {
+         min-width: 280px;
      }
 
  }

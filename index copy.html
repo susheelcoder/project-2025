@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Free Stylish Text Generator - Create Fancy Fonts for Social Media | Haproven</title>
+  <meta name="description"
+    content="Transform your text with our free stylish text generator. Create fancy fonts for Instagram, WhatsApp, Facebook, gaming names & social media bios. No login required!">
+  <meta name="keywords"
+    content="stylish text generator, fancy fonts, cool text, Instagram fonts, WhatsApp fonts, gaming names, social media fonts, Unicode text, text styler">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Haproven">
+  <meta property="og:title" content="Free Stylish Text Generator - Create Fancy Fonts">
+  <meta property="og:description" content="Create beautiful stylish text for all social media platforms instantly">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://haproven.com/stylish-text-generator">
+
+  <!-- Schema.org markup for rich snippets -->
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Stylish Text Generator",
+        "description": "Free online tool to generate stylish text fonts for social media",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Haproven"
+        }
+    }
+    </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #020617;
+      --card: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #22d3ee;
+      --accent2: #a855f7;
+      --text: #e5e7eb;
+      --text-secondary: #94a3b8;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 2rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #22d3ee, #a855f7);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Input Section */
+    .input-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .input-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      border: 2px solid var(--border);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    .input-group input:focus {
+      border-color: var(--accent);
+    }
+
+    .input-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: white;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid var(--border);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .control-group {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .control-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .control-group select,
+    .control-group input {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: 2px solid var(--border);
+      background: rgb(10 21 35);
+      color: var(--text);
+      outline: none;
+    }
+
+    .search-box {
+      position: relative;
+    }
+
+    .search-box i {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-secondary);
+    }
+
+    /* Styles Grid */
+    .styles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .style-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .style-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .style-name {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .style-preview {
+      font-size: 1.5rem;
+      min-height: 60px;
+      word-break: break-all;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .style-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .copy-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent2);
+      transform: scale(1.05);
+    }
+
+    .fav-btn {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .fav-btn.active {
+      color: var(--danger);
+    }
+
+    .fav-btn:hover {
+      color: var(--danger);
+      transform: scale(1.2);
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .category-btn {
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .category-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .category-btn:hover:not(.active) {
+      border-color: var(--accent);
+    }
+
+    /* Preview Panel */
+    .preview-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      padding: 2rem;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: none;
+    }
+
+    .preview-panel h3 {
+      margin-bottom: 1rem;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+    }
+
+    .preview-text {
+      font-size: 2rem;
+      min-height: 100px;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      word-break: break-all;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      border-radius: 16px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .feature-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* How to use section */
+    .how-to-use {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 3rem 0;
+    }
+
+    .how-to-use h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--accent);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .step {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      font-weight: bold;
+    }
+
+    .step h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .step p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* FAQ Section */
+    .faq {
+      margin: 4rem 0;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--accent);
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question h3 {
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .faq-answer {
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s;
+    }
+
+    .faq-answer.active {
+      padding: 0 1.5rem 1.5rem;
+      max-height: 500px;
+    }
+
+    .faq-answer p {
+      color: var(--text-secondary);
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 3rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transform: translateX(150%);
+      transition: transform 0.5s;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .toast.show {
+      transform: translateX(0);
+    }
+
+    .toast i {
+      color: var(--success);
+      font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .input-group {
+        flex-direction: column;
+      }
+
+      .styles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease forwards;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">Haproven</div>
+    <nav class="nav-links">
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-font"></i> Fonts</a>
+      <a href="#"><i class="fas fa-star"></i> Favorites</a>
+      <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Free Stylish Text Generator</h1>
+    <p>Transform your plain text into fancy, stylish fonts for Instagram, WhatsApp, Facebook, gaming names, and all
+      social media platforms. No installation or login required!</p>
+
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number" id="totalStyles">150+</div>
+        <div class="stat-label">Unicode Fonts</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="totalFonts">40+</div>
+        <div class="stat-label">Style Categories</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" id="totalUsers">50K+</div>
+        <div class="stat-label">Happy Users</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Input Section -->
+    <div class="input-section">
+      <div class="input-group">
+        <input type="text" id="input" placeholder="Type your text here to convert into stylish fonts..."
+          value="Hello World">
+        <button class="btn btn-primary" onclick="generateAll()">
+          <i class="fas fa-magic"></i> Generate Styles
+        </button>
+      </div>
+
+      <div class="input-actions">
+        <button class="btn btn-secondary" onclick="copyAll()">
+          <i class="far fa-copy"></i> Copy All Styles
+        </button>
+        <button class="btn btn-secondary" onclick="clearAll()">
+          <i class="fas fa-trash"></i> Clear Text
+        </button>
+        <button class="btn btn-secondary" onclick="randomizeText()">
+          <i class="fas fa-random"></i> Random Example
+        </button>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="control-group">
+        <label><i class="fas fa-search"></i> Search Styles</label>
+        <div class="search-box">
+          <input type="text" id="search" placeholder="Search style by name or type..." oninput="filterStyles()">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label><i class="fas fa-filter"></i> Sort Styles</label>
+        <select id="sortBy" onchange="sortStyles()">
+          <option value="name">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+          <option value="popular">Most Popular</option>
+          <option value="newest">Newest First</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label><i class="fas fa-sliders-h"></i> Preview Size</label>
+        <input type="range" id="fontSize" min="16" max="32" value="24" oninput="updateFontSize()">
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories" id="categories">
+      <button class="category-btn active" onclick="filterCategory('all')">All Styles</button>
+      <button class="category-btn" onclick="filterCategory('bold')">Bold Fonts</button>
+      <button class="category-btn" onclick="filterCategory('italic')">Italic Styles</button>
+      <button class="category-btn" onclick="filterCategory('script')">Cursive Script</button>
+      <button class="category-btn" onclick="filterCategory('symbols')">With Symbols</button>
+      <button class="category-btn" onclick="filterCategory('decorative')">Decorative</button>
+      <button class="category-btn" onclick="filterCategory('emoji')">Emoji Styles</button>
+      <button class="category-btn" onclick="filterCategory('favorites')">
+        <i class="fas fa-heart"></i> Favorites
+      </button>
+    </div>
+
+    <!-- Preview Panel -->
+    <div class="preview-panel">
+      <h3><i class="fas fa-eye"></i> Live Preview</h3>
+      <div class="preview-text" id="previewText">Type text above to see preview here</div>
+    </div>
+
+    <!-- Styles Grid -->
+    <div class="styles-grid" id="output"></div>
+
+    <!-- How to Use Section -->
+    <div class="how-to-use">
+      <h2>How to Use Our Stylish Text Generator</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Type Your Text</h3>
+          <p>Enter any text in the input box above. You can type your name, brand, or any message.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Choose Style</h3>
+          <p>Browse through 150+ stylish fonts. Filter by categories like bold, italic, or emoji styles.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Copy & Paste</h3>
+          <p>Click "Copy" on any style and paste it directly into Instagram, WhatsApp, or any social media.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>100% Free & Instant</h3>
+        <p>No registration required. Generate stylish text instantly without any cost or limitations.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>No Installation</h3>
+        <p>Works directly in your browser. No downloads, no installations, completely web-based.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Mobile Friendly</h3>
+        <p>Perfectly optimized for all devices - works great on phones, tablets, and desktops.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h3>Universal Compatibility</h3>
+        <p>Generated text works on all social platforms including Instagram, WhatsApp, Facebook, TikTok, and games.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>How does the stylish text generator work?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Our generator uses Unicode characters to convert your regular text into stylish fonts. These are special
+            characters that look like different font styles but are actually text symbols that work on most platforms.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Will these fonts work on Instagram and WhatsApp?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! All generated styles use Unicode characters that are supported by Instagram, WhatsApp, Facebook,
+            TikTok, and most social media platforms. Just copy and paste directly into your posts, bios, or messages.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Can I use these fonts for gaming names?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! Many of our styles work perfectly for gaming platforms like PUBG, Free Fire, Call of Duty, and
+            others. However, some games may have character restrictions, so we recommend testing first.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Is this tool completely free?</h3>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, our stylish text generator is 100% free with no hidden costs, no registration required, and no usage
+            limits. You can generate as much text as you want!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="logo">Haproven</div>
+      <p>Free Tools for Creators & Social Media Users</p>
+
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+        <a href="#">API</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="copyright">
+        © 2024 Haproven — Free Stylish Text Generator. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span>Text copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Enhanced styles database - FIXED: Now only transforms the input text
+    const styles = [
+
+
+      /* ===== MOST USED REAL FONTS ===== */
+      { name: "Script", category: "script", popularity: 98, generator: t => "𝓗𝓮𝓵𝓵𝓸 ".replace("𝓗𝓮𝓵𝓵𝓸", t.split("").map(c => "𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩".charAt("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(c)) || c).join("")) },
+
+      { name: "Bold", category: "bold", popularity: 95, generator: t => "𝐇𝐞𝐥𝐥𝐨 ".replace("𝐇𝐞𝐥𝐥𝐨", t.split("").map(c => "𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙".charAt("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(c)) || c).join("")) },
+
+      { name: "Double", category: "bold", popularity: 92, generator: t => "𝕙𝕖𝕝𝕝𝕠 ".replace("𝕙𝕖𝕝𝕝𝕠", t.split("").map(c => "𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ".charAt("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(c)) || c).join("")) },
+
+
+      // Symbol-based styles (keep these as they are)
+      { name: "Winged", category: "symbols", generator: t => `꧁ ${t} ꧂`, popularity: 90 },
+      { name: "Star Wings", category: "symbols", generator: t => `★彡 ${t} 彡★`, popularity: 88 },
+      { name: "Sparkle", category: "symbols", generator: t => `✦ ${t} ✦`, popularity: 85 },
+      { name: "Ornate", category: "symbols", generator: t => `༒ ${t} ༒`, popularity: 92 },
+      { name: "Fire", category: "emoji", generator: t => `🔥 ${t} 🔥`, popularity: 96 },
+      { name: "Heart", category: "emoji", generator: t => `💖 ${t} 💖`, popularity: 98 },
+      { name: "Crown", category: "emoji", generator: t => `♛ ${t} ♛`, popularity: 89 },
+      { name: "Lightning", category: "emoji", generator: t => `⚡ ${t} ⚡`, popularity: 94 },
+      { name: "Sparkles", category: "emoji", generator: t => `💫 ${t} 💫`, popularity: 86 },
+      { name: "Flower", category: "emoji", generator: t => `🌸 ${t} 🌸`, popularity: 84 },
+      { name: "Diamond", category: "emoji", generator: t => `💎 ${t} 💎`, popularity: 87 },
+      { name: "Ornate Indian", category: "symbols", generator: t => `꧁༒☬ ${t} ☬༒꧂`, popularity: 91 },
+      { name: "Egyptian", category: "symbols", generator: t => `𓆩 ${t} 𓆪`, popularity: 75 },
+      { name: "Moon", category: "emoji", generator: t => `☾ ${t} ☽`, popularity: 83 },
+      { name: "Skull", category: "emoji", generator: t => `☠ ${t} ☠`, popularity: 85 },
+
+      // More simple decorative styles
+      { name: "Brackets Style", category: "symbols", generator: t => `【${t}】`, popularity: 82 },
+      { name: "Book Style", category: "symbols", generator: t => `《${t}》`, popularity: 78 },
+      { name: "Arrow Style", category: "decorative", generator: t => `→ ${t} ←`, popularity: 76 },
+      { name: "Parentheses", category: "decorative", generator: t => `(${t})`, popularity: 65 },
+      { name: "Curly Brackets", category: "decorative", generator: t => `{ ${t} }`, popularity: 68 },
+      { name: "Square Brackets", category: "decorative", generator: t => `[ ${t} ]`, popularity: 62 },
+
+      // Simple text transformations
+      { name: "UPPERCASE", category: "bold", generator: t => t.toUpperCase(), popularity: 60 },
+      { name: "lowercase", category: "italic", generator: t => t.toLowerCase(), popularity: 58 },
+      {
+        name: "Title Case", category: "decorative", generator: t => t.replace(/\w\S*/g, txt =>
+          txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()), popularity: 70
+      },
+
+      // Spaced out text
+      { name: "S P A C E D", category: "decorative", generator: t => t.split('').join(' '), popularity: 73 },
+      { name: "D O T T E D", category: "decorative", generator: t => t.split('').join(' • '), popularity: 69 },
+      { name: "S T A R R E D", category: "decorative", generator: t => t.split('').join(' ★ '), popularity: 77 },
+
+      /* ===== HINDI & REGIONAL SUPPORT ===== */
+      /* Unicode Hindi fonts exist nahi karte, isliye decoration + emoji based styling hota hai */
+      { name: "Hindi Royal", category: "hindi", popularity: 98, generator: t => `꧁༒ ${t} ༒꧂` },
+      { name: "Hindi Fire", category: "hindi", popularity: 96, generator: t => `🔥 ${t} 🔥` },
+      { name: "Hindi Star", category: "hindi", popularity: 94, generator: t => `★ ${t} ★` },
+      { name: "Hindi Flower", category: "hindi", popularity: 92, generator: t => `🌸 ${t} 🌸` },
+      { name: "Hindi Crown", category: "hindi", popularity: 90, generator: t => `♛ ${t} ♛` },
+      { name: "Hindi Bracket", category: "hindi", popularity: 88, generator: t => `【 ${t} 】` }
+    ];
+
+    // Favorites storage
+    let favorites = JSON.parse(localStorage.getItem('textGenFavorites')) || [];
+    let currentCategory = 'all';
+    let currentSearch = '';
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function () {
+      generateAll();
+      updateFavoritesButton();
+
+      // Set total styles count
+      document.getElementById('totalStyles').textContent = styles.length + '+';
+
+      // Add animation class to elements
+      document.querySelectorAll('.feature-card, .style-card').forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('fade-in');
+        }, i * 100);
+      });
+    });
+
+    // Generate all styles
+    function generateAll() {
+      const text = document.getElementById('input').value || 'Hello World';
+      const output = document.getElementById('output');
+      const previewText = document.getElementById('previewText');
+
+      output.innerHTML = '';
+
+      // Update preview with first style
+      if (text.trim() && styles.length > 0) {
+        previewText.textContent = styles[0].generator(text);
+      }
+
+      let filteredStyles = styles;
+
+      // Apply category filter
+      if (currentCategory !== 'all') {
+        if (currentCategory === 'favorites') {
+          filteredStyles = styles.filter(style => favorites.includes(style.name));
+        } else {
+          filteredStyles = styles.filter(style => style.category === currentCategory);
+        }
+      }
+
+      // Apply search filter
+      if (currentSearch) {
+        filteredStyles = filteredStyles.filter(style =>
+          style.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+          style.category.toLowerCase().includes(currentSearch.toLowerCase())
+        );
+      }
+
+      // Apply sorting
+      const sortBy = document.getElementById('sortBy').value;
+      filteredStyles.sort((a, b) => {
+        switch (sortBy) {
+          case 'name-desc':
+            return b.name.localeCompare(a.name);
+          case 'popular':
+            return b.popularity - a.popularity;
+          case 'newest':
+            return styles.indexOf(b) - styles.indexOf(a);
+          default:
+            return a.name.localeCompare(b.name);
+        }
+      });
+
+      // Generate cards
+      filteredStyles.forEach(style => {
+        const val = style.generator(text);
+
+        const div = document.createElement('div');
+        div.className = 'style-card fade-in';
+        div.innerHTML = `
+                    <div class="style-name">${style.name} <small>(${style.category})</small></div>
+                    <div class="style-preview" style="font-size: ${document.getElementById('fontSize').value}px">${val}</div>
+                    <div class="style-actions">
+                        <button class="copy-btn" onclick="copyText('${val.replace(/'/g, "\\'")}')">
+                            <i class="far fa-copy"></i> Copy
+                        </button>
+                        <button class="fav-btn ${favorites.includes(style.name) ? 'active' : ''}" 
+                                onclick="toggleFavorite('${style.name}')">
+                            <i class="${favorites.includes(style.name) ? 'fas' : 'far'} fa-heart"></i>
+                        </button>
+                    </div>
+                `;
+        output.appendChild(div);
+      });
+
+      // Update stats
+      document.getElementById('totalStyles').textContent = filteredStyles.length + '+';
+    }
+
+    // Filter by category
+    function filterCategory(category) {
+      currentCategory = category;
+
+      // Update active button
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+
+      generateAll();
+    }
+
+    // Filter styles by search
+    function filterStyles() {
+      currentSearch = document.getElementById('search').value;
+      generateAll();
+    }
+
+    // Sort styles
+    function sortStyles() {
+      generateAll();
+    }
+
+    // Update font size
+    function updateFontSize() {
+      const size = document.getElementById('fontSize').value;
+      document.querySelectorAll('.style-preview').forEach(el => {
+        el.style.fontSize = size + 'px';
+      });
+    }
+
+    // Copy text to clipboard
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Text copied to clipboard!');
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+        showToast('Failed to copy text. Please try again.');
+      });
+    }
+
+    // Copy all styles
+    function copyAll() {
+      const text = document.getElementById('input').value || 'Hello World';
+      let allText = '';
+
+      styles.forEach(style => {
+        allText += style.generator(text) + '\n';
+      });
+
+      navigator.clipboard.writeText(allText).then(() => {
+        showToast('All styles copied to clipboard!');
+      });
+    }
+
+    // Clear input
+    function clearAll() {
+      document.getElementById('input').value = '';
+      document.getElementById('previewText').textContent = 'Type text above to see preview here';
+      generateAll();
+    }
+
+    // Randomize text
+    function randomizeText() {
+      const sampleTexts = [
+        'Hello World', 'Instagram', 'WhatsApp', 'Gaming',
+        'Cool Name', 'Fancy Text', 'Profile', 'Social Media',
+        'Bio Text', 'Username', 'Status', 'Message'
+      ];
+
+      const randomText = sampleTexts[Math.floor(Math.random() * sampleTexts.length)];
+      document.getElementById('input').value = randomText;
+      generateAll();
+    }
+
+    // Toggle favorite
+    function toggleFavorite(styleName) {
+      const index = favorites.indexOf(styleName);
+
+      if (index === -1) {
+        favorites.push(styleName);
+        showToast('Added to favorites!');
+      } else {
+        favorites.splice(index, 1);
+        showToast('Removed from favorites!');
+      }
+
+      // Save to localStorage
+      localStorage.setItem('textGenFavorites', JSON.stringify(favorites));
+
+      // Update UI
+      if (currentCategory === 'favorites') {
+        generateAll();
+      } else {
+        updateFavoritesButton();
+      }
+    }
+
+    // Update favorites button
+    function updateFavoritesButton() {
+      const favBtn = document.querySelector('.category-btn:nth-last-child(1)');
+      if (favBtn) {
+        const heartIcon = favBtn.querySelector('i');
+        heartIcon.className = favorites.length > 0 ? 'fas fa-heart' : 'far fa-heart';
+
+        // Update badge if we had one
+        if (favorites.length > 0) {
+          favBtn.innerHTML = `<i class="fas fa-heart"></i> Favorites (${favorites.length})`;
+        } else {
+          favBtn.innerHTML = `<i class="far fa-heart"></i> Favorites`;
+        }
+      }
+    }
+
+    // Show toast notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.querySelector('span').textContent = message;
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+
+    // Toggle FAQ
+    function toggleFAQ(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle('active');
+
+      const icon = element.querySelector('i');
+      if (icon.classList.contains('fa-chevron-down')) {
+        icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+      } else {
+        icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+      }
+    }
+  </script>
+</body>
+
+</html>

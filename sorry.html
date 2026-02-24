@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stylish Text Generator – Fancy Fonts | Haproven</title>
+<meta name="description" content="Create stylish, fancy and cool fonts for Instagram, WhatsApp and gaming names using Haproven Stylish Text Generator.">
+<meta name="keywords" content="Stylish Text Generator, Fancy Text, Instagram Fonts, Cool Fonts, Haproven">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;font-family:Poppins}
+body{margin:0;background:radial-gradient(circle at top,#0f172a,#020617);color:#e5e7eb}
+.hero{text-align:center;padding:70px 20px}
+.hero h1{font-size:48px;background:linear-gradient(90deg,#22d3ee,#a855f7);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:700px;margin:auto;color:#cbd5f5}
+.container{max-width:1100px;margin:auto;padding:20px}
+.input-box{background:rgba(255,255,255,.05);border-radius:14px;padding:20px;display:flex;gap:10px}
+.input-box input{flex:1;padding:14px;border-radius:10px;border:none;font-size:18px}
+.search{text-align:right;margin:20px 0}
+.search input{padding:10px 14px;border-radius:10px;border:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{background:rgba(255,255,255,.06);border-radius:14px;padding:14px}
+.actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.copy{background:#22d3ee;border:none;padding:6px 14px;border-radius:8px;cursor:pointer}
+.fav{cursor:pointer;opacity:.4}
+.fav.active{opacity:1}
+.toast{position:fixed;bottom:20px;right:20px;background:#020617;border:1px solid rgba(255,255,255,.1);padding:10px 18px;border-radius:12px;display:none}
+footer{text-align:center;padding:40px;color:#94a3b8}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+<h1>Stylish Text Generator</h1>
+<p>Create cool, fancy & stylish Unicode fonts for Instagram bios, WhatsApp, gaming names and social media — by Haproven.</p>
+</div>
+
+<div class="container">
+<div class="input-box">
+<input id="input" placeholder="Type your text..." oninput="generate()">
+</div>
+
+<div class="search">
+<input id="search" placeholder="Search style..." oninput="generate()">
+</div>
+
+<div class="grid" id="output"></div>
+</div>
+
+<footer>© 2026 Haproven – Creative Tools</footer>
+<div class="toast" id="toast">Copied!</div>
+
+<script>
+function mapFont(text, normal, styled) {
+ let result="";
+ for(let ch of text){
+  let i=normal.indexOf(ch);
+  result+= i!=-1 ? styled[i] : ch;
+ }
+ return result;
+}
+
+const normal="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+const fonts={
+ script:"𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩0123456789",
+ bold:"𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙0123456789",
+ double:"𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ0123456789",
+ mono:"𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉0123456789"
+};
+
+const styles=[
+{n:"Script",g:t=>mapFont(t,normal,fonts.script)},
+{n:"Bold",g:t=>mapFont(t,normal,fonts.bold)},
+{n:"Double",g:t=>mapFont(t,normal,fonts.double)},
+{n:"Mono",g:t=>mapFont(t,normal,fonts.mono)},
+{n:"Fire",g:t=>"🔥 "+mapFont(t,normal,fonts.bold)+" 🔥"},
+{n:"Star",g:t=>"★ "+mapFont(t,normal,fonts.script)+" ★"},
+{n:"Cute",g:t=>"♡ "+mapFont(t,normal,fonts.double)+" ♡"},
+{n:"Dark",g:t=>"☠ "+mapFont(t,normal,fonts.bold)+" ☠"}
+];
+
+function generate(){
+const t=document.getElementById("input").value||"Haproven";
+const s=document.getElementById("search").value.toLowerCase();
+const out=document.getElementById("output");
+out.innerHTML="";
+styles.forEach(st=>{
+const v=st.g(t);
+if(st.n.toLowerCase().includes(s)||v.toLowerCase().includes(s)){
+const d=document.createElement("div");
+d.className="card";
+d.innerHTML=`<div>${v}</div><div class="actions"><button class="copy" onclick="copyText('${v.replace(/'/g,"")}')">Copy</button><span class="fav">❤</span></div>`;
+out.appendChild(d);
+}
+});
+}
+
+function copyText(t){
+navigator.clipboard.writeText(t);
+const toast=document.getElementById("toast");
+toast.style.display="block";
+setTimeout(()=>toast.style.display="none",1200);
+}
+
+generate();
+</script>
+
+</body>
+</html>
